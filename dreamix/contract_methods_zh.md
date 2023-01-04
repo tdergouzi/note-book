@@ -862,66 +862,81 @@
      * @param index 活动游标
      */
     punchIn(uint256)
+
+    /**
+     * @dev 放弃合约所有权，合约所有人默认为0地址
+     * @notice onlyOwner
+    */
     renounceOwnership()
-    setTreasury(address)
-    transferOwnership(address)
-    updateActivity(uint256,uint256,address)
-    userInfo(uint256,address)
+
     /**
      * @dev 设置金库账户地址
-     * @notice 拥有者权限调用
-     * @param treasury string 新金库账户地址
+     * @notice onlyOwner
+     * @param address 新金库账户地址
      */
-    setTreasury(treasury)
-
+    setTreasury(address)
 
     /**
-     * @dev 查询总活动数量
-     */
-    activityLength()
-
+     * @dev 转移合约所有权至指定地址
+     * @notice onlyOwner
+     * @prama address 新的所有者地址
+    */
+    transferOwnership(address)
 
     /**
-     * @dev 查询活动信息
-     * @param index 活动游标
-     * @return {
-     *  startTimestamp: 活动开始时间
-     *  endTimestamp: 活动结束时间
-     *  limitAmount: 活动打卡最低次数
-     *  rewardAmount: 活动奖励 token 总量
-     *  rewardToken: 活动奖励 token 地址
-     *  successAmount: 当前活动满足打卡次数人数
-     * }
-     */
-    activityInfo(index)
-
+     * @dev 更新活动配置
+     * @notice onlyOwner
+     * @param uint256 活动游标
+     * @param uint256 活动奖励 token 总量
+     * @param address 活动奖励 token 地址
+    */
+    updateActivity(uint256,uint256,address)
 
     /**
      * @dev 查询用户信息
-     * @param index 活动游标
-     * @param user 用户地址
+     * @param uint256 活动游标
+     * @param address 用户地址
      * @return {
      *  lastTimestamp: 上一次打卡时间戳
      *  amount: 累计打卡次数
      *  isClaimed: 是否已领取活动奖励
      * }
      */
-    userInfo(index, user)
-
-
-    /**
-     * @dev 活动打卡
-     * @param index 活动游标
-     */
-    punchIn(index)
- 
+    userInfo(uint256,address)
 
     /**
-     * @dev 领取活动奖励
-     * @param index 活动游标
-     * @param user 用于接收奖励的账户地址
-     */
-    claim(index, user)
+     * @dev 所有者创建活动时提交事件
+     * @param activityId uint256 活动游标
+     * @param startTime uint256 活动开始时间戳
+     * @param endTime uint256 活动结束时间戳
+     * @param limitAmount uint256 活动最低打卡次数
+    */
+    event CreateActivity(uint256 activityId, uint256 startTime, uint256 endTime, uint256 limitAmount);
+
+    /**
+     * @dev 所有者更新活动时提交事件
+     * @param activityId uint256 活动游标
+     * @param rewardAmount uint256 活动奖励 token 总量
+     * @param rewardToken address 活动奖励 token 地址
+    */
+    event UpdateActivity(uint256 activityId, uint256 rewardAmount, address rewardToken);
+
+    /**
+     * @dev 用户活动打卡时提交事件
+     * @param activityId uint256 活动游标
+     * @param user address 用户地址
+     * @param timestamp uint256 活动打卡时间戳
+    */
+    event PunchInEvent(uint256 activityId, address user, uint256 timestamp);
+
+    /**
+     * @dev 用户领取活动奖励时提交事件
+     * @param activityId uint256 活动游标
+     * @param user address 用户地址
+     * @param amount uint256 领取奖励数量
+     * @param token address 领取奖励 token 的地址
+    */
+    event Claim(uint256 activityId, address user, uint256 amount, address token);
 ```
 
 
