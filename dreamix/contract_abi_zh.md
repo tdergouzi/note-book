@@ -1,53 +1,64 @@
 
 ## Contract ABI
 
+```
+接口按照接口首字母顺序 A-Z 排序
+
+合约内数据与用户无关
+```
+
 ### ERC20Token
 
 基础 ERC20 token 合约
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor(string name, string symbol, uint256 totalSupply)
+
+    /**
      * @dev 查询用户余额
      * @param 用户钱包地址
      * @return uint256
     */
-    balanceOf(address)
+    function balanceOf(address) view returns(uint256)
 
     /**
      * @dev 查询 token 名称
      * @return string
     */
-    name()
+    function name() view returns(string)
 
     /**
      * @dev 查询 token 符号
      * @return string
     */
-    symbol()
+    function symbol() view returns(string)
 
     /**
      * @dev 查询 token 精度位数
      * @return uint256
     */
-    decimals()
+    function decimals() view returns(uint256)
 
     /**
      * @dev 查询合约 owner 地址
      * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 放弃合约所有权，合约所有人默认为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 查询 token 总发行量
      * @return uint256
     */
-    totalSupply()
+    function totalSupply() view returns(uint256)
 
     /**
      * @dev 查询用户授权给花销者可用额度
@@ -55,21 +66,21 @@
      * @param address 花销者地址
      * @return uint256
     */
-    allowance(address,address)
+    function allowance(address,address) view returns(uint256)
 
     /**
      * @dev 用户授权给其他用户可以支配用户的资金
      * @param address 花销者地址
      * @param uint256 批准数量
     */
-    approve(address,uint256)
+    function approve(address,uint256)
 
     /**
      * @dev 用户转账给其他用户资金
      * @param address 接收者地址
      * @param uint256 数量
     */
-    transfer(address,uint256)
+    function transfer(address,uint256)
 
     /**
      * @dev 增发 token 至指定的账户
@@ -77,19 +88,19 @@
      * @param address 接收者地址
      * @param uint256 增发数量
     */
-    mint(address,uint256)
+    function mint(address,uint256)
 
     /**
      * @dev 用户销毁个人账户中 token 
      * @param uint256 销毁数量
     */
-    burn(uint256)
+    function burn(uint256)
 
     /**
      * @dev 转移合约所有权至指定地址
      * @prama address 新的所有者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 转账操作时提交事件
@@ -114,43 +125,48 @@
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor(string name, string symbol, string baseURI)
+
+    /**
      * @dev 查询 nft 基础URL
      * @return string
     */
-    _base_uri()
+    function _base_uri() view returns(string)
 
     /**
      * @dev 查询 nft 总量
      * @return uint256
     */
-    _totalSupply()
+    function _totalSupply() view returns(uint256)
 
     /**
      * @dev 将指定 tokenId nft 批准给目标账户
      * @param address 被批准人账户地址
      * @param uint256 指定的 tokenId
     */
-    approve(address,uint256)
+    function approve(address,uint256)
 
     /**
      * @dev 获取用户拥有的 nft 总量
      * @param address 账户地址
      * @return uint256
      */
-    balance(address)
+    function balance(address) view returns(uint256)
 
     /**
      * @dev 销毁本人拥有的 nft
      * @param uint256 指定的 nft tokenId
     */
-    burn(uint256)
+    function burn(uint256)
 
     /**
      * @dev 查询 nft 被批准人的账户地址
      * @param uint256 tokenId
      * @return address
     */    
-    getApproved(uint256)
+    function getApproved(uint256) view returns(address)
 
     /**
      * @dev 查询目标地址是否将自己所有的 nft 的转移权限批准给指定地址
@@ -158,7 +174,7 @@
      * @param address nft 被批准账户地址
      * @return bool
     */
-    isApprovedForAll(address,address)
+    function isApprovedForAll(address,address) view returns(bool)
 
     /**
      * @dev 增发一个 nft
@@ -166,59 +182,59 @@
      * @param address 接受者账户地址，用于接受增发的 nft
      * @param string tokenURI nft 元数据
     */
-    mint(address,string)
+    function mint(address,string)
 
     /**
      * @dev 查询 nft 名称
      * @return string
     */
-    name()
+    function name() view returns(string)
 
     /**
      * @dev 查询 nft 合约所有者地址
      * @return string
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 查询 nft 所有者地址
      * @param uint256 指定 nft tokenId
-     * @return string
+     * @return address
     */
-    ownerOf(uint256)
+    function ownerOf(uint256) view returns(address)
 
     /**
      * @dev 放弃合约管理权限，默认设置为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 设置目标账户是否拥有调用者所有 nft 的批准权限
      * @param address 被批准账户地址
      * @param bool 批准状态 [true: 批准, false: 未批准]
     */
-    setApprovalForAll(address,bool)
+    function setApprovalForAll(address,bool)
 
     /**
      * @dev 设置 nft 基础URL
      * @notice onlyOwner
      * @param string 基础URL
     */
-    setBaseURI(string)
+    function setBaseURI(string)
 
     /**
      * @dev 查询 nft 符号
      * @return string
     */
-    symbol()
+    function symbol() view returns(string)
 
     /**
      * @dev 查询 nft 元数据
      * @param uint256 指定 nft tokenId
      * @return string
     */
-    tokenURI(uint256)
+    function tokenURI(uint256) view returns(string)
 
     /**
      * @dev 将指定 nft 从所有者账户转移至目标账户
@@ -226,14 +242,14 @@
      * @param address 接受者账户地址
      * @param uint256 转移 nft tokenId
     */
-    transferFrom(address,address,uint256)
+    function transferFrom(address,address,uint256)
 
     /**
      * @dev 转移合约管理权限
      * @notice onlyOwner
      * @param address 新管理者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev transferFrom mint batchMint 时提交事件
@@ -250,28 +266,33 @@
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor(string name, string symbol, string baseURI)
+
+    /**
      * @dev 查询 nft 基础URL
      * @return string
     */
-    _baseURI()
+    function _baseURI() view returns(string)
 
     /**
      * @dev 查询 nft 名称
      * @return string
     */
-    _name()
+    function _name() view returns(string)
 
     /**
      * @dev 查询 nft 符号
      * @return string
     */
-    _symbol()
+    function _symbol() view returns(string)
 
     /**
      * @dev 查询 nft 总量
      * @return uint256
     */
-    _totalSupply()
+    function _totalSupply() view returns(uint256)
 
     /**
      * @dev 获取用户 nft 数量
@@ -279,7 +300,7 @@
      * @param uint256 指定 nft tokenId
      * @return uint256
     */
-    balanceOf(address,uint256)
+    function balanceOf(address,uint256) view returns(uint256)
 
     /**
      * @dev 批量获取用户 nft 数量
@@ -287,14 +308,14 @@
      * @param uint256[] 指定 nft tokenId 数组
      * @return uint256[]
     */
-    balanceOfBatch(address[],uint256[])
+    function balanceOfBatch(address[],uint256[]) view returns(uint256[])
 
     /**
      * @dev 销毁本人拥有 nft 的指定数量
      * @param uint256 指定的 nft tokenId
      * @param uint256 销毁数量
     */
-    burn(uint256,uint256)
+    function burn(uint256,uint256)
 
     /**
      * @dev 查询目标地址是否将自己所有的 nft 的转移权限批准给指定地址
@@ -302,7 +323,7 @@
      * @param address nft 被批准账户地址
      * @return bool
     */
-    isApprovedForAll(address,address)
+    function isApprovedForAll(address,address) view returns(bool)
 
     /**
      * @dev 向指定账户中增发 nft
@@ -311,7 +332,7 @@
      * @param uint256 增发数量
      * @param string nft 元数据
     */
-    mint(address,uint256,string)
+    function mint(address,uint256,string)
 
     /**
      * @dev 向指定账户中增发指定数量的 nft
@@ -320,19 +341,19 @@
      * @param uint256 nft tokenId
      * @param uint256 增发数量
     */
-    mintAmount(address,uint256,uint256)
+    function mintAmount(address,uint256,uint256)
 
     /**
      * @dev 查询 nft 合约所有者地址
-     * @return string
+     * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 放弃合约管理权限，默认设置为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 批量从转出账户地址转移不同数量的不同 nft 至接收账户地址
@@ -342,7 +363,7 @@
      * @param uint256[] 转移数量数组
      * @param string 交易信息，可为空 "0x"
     */
-    safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)
+    function safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)
 
     /**
      * @dev 从转出账户地址转移指定数量的 nft 至接收账户地址
@@ -352,35 +373,35 @@
      * @param uint256 转移数量
      * @param string 交易信息，可为空 "0x"
     */
-    safeTransferFrom(address,address,uint256,uint256,bytes)
+    function safeTransferFrom(address,address,uint256,uint256,bytes)
 
     /**
      * @dev 设置目标账户是否拥有调用者所有 nft 的批准权限
      * @param address 被批准账户地址
      * @param bool 批准状态 [true: 批准, false: 未批准]
     */
-    setApprovalForAll(address,bool)
+    function setApprovalForAll(address,bool)
 
     /**
      * @dev 设置 nft 基础URL
      * @notice onlyOwner
      * @param string 基础URL
     */
-    setBaseURI(string)
+    function setBaseURI(string)
 
     /**
      * @dev 转移合约管理权限
      * @notice onlyOwner
      * @param address 新管理者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 查询 nft 元数据
      * @param uint256 指定 nft tokenId
      * @return string
     */
-    uri(uint256)
+    function uri(uint256) view returns(string)
 
     /**
      * @dev safeBatchTransferFrom mint mintAmount burn 提交事件
@@ -409,38 +430,45 @@
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor()
+
+    /**
      * @dev 对挂单出价
      * @notice 如果出价低于当前最高价或者加价低于最低加价数量，则失败
      * @notice 如果出价大于等于挂单最高价，直接结单，自动执行 {creatorClaim} {bidderClaim}
      * @param uint256 挂单游标
      * @param uint256 出价数量
     */
-    bid(uint256,uint256)
+    function bid(uint256,uint256)
 
     /**
      * @dev 查询挂单竞价数量
      * @param uint256 挂单游标
+     * @return uint256
     */
-    bidCountP(uint256)
+    function bidCountP(uint256) view returns(uint256)
 
     /**
      * @dev 取消挂单
      * @notice 目前只支持挂单开售前取消
      * @param uint256 挂单游标
     */
-    cancel(uint256)
+    function cancel(uint256)
 
     /**
      * @dev 领取挂单，竞拍成功双方交换资产至各自账户，流拍双方资产原路退还
      * @param uint256 挂单游标
     */
-    claim(uint256)
+    function claim(uint256)
 
     /**
      * @dev 查询挂单是否已被领取
      * @param uint256 挂单游标
+     * @return bool
     */
-    claimP(uint256)
+    function claimP(uint256) view returns(bool)
 
     /**
      * @dev 创建 ERC1155 类型挂单
@@ -456,7 +484,7 @@
      * @param uint256 挂单开售时间，unix timestamp
      * @param uint256 挂单持续时间，单位秒
     */    
-    createErc1155(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
+    function createErc1155(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
 
     /**
      * @dev 创建 ERC721 类型挂单
@@ -471,127 +499,128 @@
      * @param uint256 挂单开售时间，unix timestamp
      * @param uint256 挂单持续时间，单位秒
     */
-    createErc721(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
+    function createErc721(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
     
     /**
      * @dev 查询挂单是否被取消
      * @param uint256 挂单游标
     */
-    creatorCanceledP(uint256)
+    function creatorCanceledP(uint256) view returns(bool)
 
     /**
      * @dev 查询挂单下一次竞价出价数量，即当前最高竞价数量加上加价间隔
      * @param uint256 挂单游标
      * @return uint256
     */
-    currentBidderAmount(uint256)
+    function currentBidderAmount(uint256) view returns(uint256)
 
     /**
      * @dev 查询挂单当前竞拍最高价
      * @param uint256 挂单游标
      * @return uint256
     */
-    currentBidderAmount1P(uint256)
+    function currentBidderAmount1P(uint256) view returns(uint256)
 
     /**
      * @dev 查询挂单当前最高价竞拍者地址
      * @param uint256 挂单游标
      * @return address
     */
-    currentBidderP(uint256)
+    function currentBidderP(uint256) view returns(address)
     
     /**
      * @dev 查询是否禁止挂 ERC721 类型的 NFT [true: 禁止, false:未禁止] 默认 false
      * @return bool
     */
-    disableErc1155()
+    function disableErc1155() view returns(bool)
 
     /**
      * @dev 是否禁止挂 ERC1155 类型的 NFT [true: 禁止, false:未禁止] 默认 false
      * @return false
     */
-    disableErc721()
+    function disableErc721() view returns(bool)
 
     /**
      * @dev 查询总挂单数量
      * @return uint256
     */
-    getPoolCount()
+    function getPoolCount() view returns(uint256)
 
     /**
      * @dev 查询目标用户是否为挂单创建人
      * @param string 目标用户地址
      * @param uint256 挂单游标
     */
-    isCreator(address,uint256)
+    function isCreator(address,uint256) view returns(bool)
 
     /**
      * @dev 查询目标用户某个挂单出价
      * @param string 账户地址
      * @param uint256 挂单游标
+     * @return uint256
     */
-    myBidderAmount1P(address,uint256)
+    function myBidderAmount1P(address,uint256) view returns(uint256)
 
 
     /**
      * @dev 查询合约所有者地址
      * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 通过游标查询挂单信息
      * @notice 游标取值范围可以通过 {getPoolCount} 方法获取
      * @param uint256 挂单游标
      * @return {
-     *      creator: 挂单人账户地址
-     *      token0: 换出 token 的合约地址（NFT 合约地址）
-     *      token1: 换入 token 的合约地址（token 合约地址）
-     *      tokenId: 换出 token 的 tokenId
-     *      tokenAmount0: 换出 token tokenId 的数量
-     *      amountMax1: 换出最高价格
-     *      amountMin1: 换出最低价格
-     *      amountMinIncr1: 单次出价最低加价数量
-     *      openAt: 挂单开售时间
-     *      closeAt: 挂单结束时间
-     *      nftType: 换出 token 的类型， [0:ERC721, 1:ERC1155]
+     *      address: 挂单人账户地址
+     *      address: 换出 token 的合约地址（NFT 合约地址）
+     *      address: 换入 token 的合约地址（token 合约地址）
+     *      uint256: 换出 token 的 tokenId
+     *      uint256: 换出 token tokenId 的数量
+     *      uint256: 换出最高价格
+     *      uint256: 换出最低价格
+     *      uint256: 单次出价最低加价数量
+     *      uint256: 挂单开售时间
+     *      uint256: 挂单结束时间
+     *      uint256: 换出 token 的类型， [0:ERC721, 1:ERC1155]
      * }
     */
-    pools(uint256)
+    function pools(uint256) view returns(address,address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
 
     /**
      * @dev 放弃合约管理权限，默认设置为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 查询挂单最低成交价
      * @param uint256 挂单游标
      * @reutrn uint256
     */
-    reserveAmount1P(uint256)
+    function reserveAmount1P(uint256) view returns(uint256)
 
     /**
      * @dev 设置是否挂 ERC1155 类型 nft 订单
      * @notice onlyOwner
      * @param bool [true: 禁止, false: 允许]
     */
-    setDisableErc1155(bool)
+    function setDisableErc1155(bool)
 
     /**
      * @dev 设置是否挂 ERC721 类型 nft 订单
      * @notice onlyOwner
      * @param bool [true: 禁止, false: 允许]
     */
-    setDisableErc721(bool)
+    function setDisableErc721(bool)
 
     /**
      * @dev 转移合约所有权至指定地址
      * @notice onlyOwner
      * @prama address 新的所有者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 创建挂单时提交事件
@@ -635,10 +664,14 @@
 
 ```js
     /**
+     * @dev 没有 constructor，相关参数给空
+    */
+
+    /**
      * @dev 取消挂单
      * @param uint256 挂单游标
     */
-    cancel(uint256)
+    function cancel(uint256)
 
     /**
      * @dev 创建 ERC1155 类型挂单
@@ -649,7 +682,7 @@
      * @param uint256 换入 token 总量
      * @param uint256 挂单开售时间，unix timestamp
     */
-    createErc1155(address,address,uint256,uint256,uint256,uint256)
+    function createErc1155(address,address,uint256,uint256,uint256,uint256)
 
     /**
      * @dev 创建 ERC721 类型挂单
@@ -660,86 +693,85 @@
      * @param uint256 换入 token 总量
      * @param uint256 挂单开售时间，unix timestamp
     */
-    createErc721(address,address,uint256,uint256,uint256)
+    function createErc721(address,address,uint256,uint256,uint256)
 
     /**
      * @dev 查询挂单是否已取消挂单
      * @param uint256 挂单游标
      * @return bool
     */
-    creatorCanceledP(uint256)
+    function creatorCanceledP(uint256) view returns(bool)
     
     /**
      * @dev 查询是否禁止挂 ERC721 类型的 NFT [true: 禁止, false:未禁止] 默认 false
      * @notice onlyOwner
      * @return bool
     */
-    disableErc1155()
+    function disableErc1155() view returns(bool)
 
     /**
      * @dev 是否禁止挂 ERC1155 类型的 NFT [true: 禁止, false:未禁止] 默认 false
      * @notice onlyOwner
      * @return false
     */
-    disableErc721()
+    function disableErc721() view returns(bool)
 
     /**
      * @dev 查询总挂单数量
      * @return uint256
     */
-    getPoolCount()
+    function getPoolCount() view returns(uint256)
 
     /**
      * @dev 查询目标用户是否为挂单创建人
-     * @param string 目标用户地址
+     * @param address 目标用户地址
      * @param uint256 挂单游标
+     * @return bool
     */
-    isCreator(address,uint256)
+    function isCreator(address,uint256) view returns(bool)
 
     /**
      * @dev 查询合约所有者地址
      * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 通过游标查询挂单详情
      * @notice 游标取值范围可以通过 {getPoolCount} 方法获取
      * @param uint256 挂单游标
      * @return {
-     *      creator: 挂单人账户地址
-     *      token0: 换出 token 的合约地址（NFT 合约地址）
-     *      token1: 换入 token 的合约地址（token 合约地址）
-     *      tokenId: 换出 token 的 tokenId
-     *      amountTotal0: 换出 token 总量
-     *      amountTotal1: 换入 token 总量
-     *      openAt: 挂单开售时间
-     *      nftType: 换出 token 的类型， [0:ERC721, 1:ERC1155]
-
+     *      address: 挂单人账户地址
+     *      address: 换出 token 的合约地址（NFT 合约地址）
+     *      address: 换入 token 的合约地址（token 合约地址）
+     *      uint256: 换出 token 的 tokenId
+     *      uint256: 换出 token 总量
+     *      uint256: 换入 token 总量
+     *      uint256: 挂单开售时间
+     *      uint256: 换出 token 的类型， [0:ERC721, 1:ERC1155]
      * }
     */
-    // function pools(uint) external returns(Pool memory);
-    pools(uint256)
+    function pools(uint256) view returns(address,address,address,uint256,uint256,uint256,uint256,uint256)
 
     /**
      * @dev 放弃合约所有权，合约所有人默认为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 设置是否挂 ERC1155 类型 nft 订单
      * @notice onlyOwner
      * @param bool [true: 禁止, false: 允许]
     */    
-    setDisableErc1155(bool)
+    function setDisableErc1155(bool)
 
     /**
      * @dev 设置是否挂 ERC721 类型 nft 订单
      * @notice onlyOwner
      * @param bool [true: 禁止, false: 允许]
     */
-    setDisableErc721(bool)
+    function setDisableErc721(bool)
 
     /**
      * @dev 购买挂单
@@ -749,33 +781,33 @@
      * @param uint256 挂单游标
      * @param uint256 购买的换出 token 的数量
     */
-    swap(uint256,uint256)
+    function swap(uint256,uint256)
 
     /**
      * @dev 查询挂单已换出 token 数量
      * @return uint256
      */
-    swappedAmount0P(uint256)
+    function swappedAmount0P(uint256) view returns(uint256)
 
     /**
      * @dev 查询挂单已换入 token 数量
      * @return uint256
      */
-    swappedAmount1P(uint256)
+    function swappedAmount1P(uint256) view returns(uint256)
 
     /**
      * @dev 查询挂单是否已结单
      * @param uint256 挂单游标
      * @return bool
     */
-    swappedP(uint256)
+    function swappedP(uint256) view returns(bool)
 
     /**
      * @dev 转移合约所有权至指定地址
      * @notice onlyOwner
      * @prama address 新的所有者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 创建挂单时提交事件
@@ -809,37 +841,42 @@
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor(address treasury)
+
+    /**
      * @dev 查询活动信息
      * @param uint256 活动游标
      * @return {
-     *  startTimestamp: 活动开始时间
-     *  endTimestamp: 活动结束时间
-     *  limitAmount: 活动打卡最低次数
-     *  rewardAmount: 活动奖励 token 总量
-     *  rewardToken: 活动奖励 token 地址
+     *  uint256: 活动开始时间
+     *  uint256: 活动结束时间
+     *  uint256: 活动打卡最低次数
+     *  uint256: 活动奖励 token 总量
+     *  address: 活动奖励 token 地址
      * }
      */
-    activityInfo(uint256)
+    function activityInfo(uint256) view returns(uint256,uint256,uint256,uint256,address)
 
     /**
      * @dev 查询总活动数量
      * @return uint256
      */
-    activityLength()
+    function activityLength() view returns(uint256)
 
     /**
      * @dev 查询活动已完成最低限度打卡次数总人数
      * @param uint256 活动游标
      * @return uint256
     */
-    activitySuccessAmount(uint256)
+    function activitySuccessAmount(uint256) view returns(uint256)
 
     /**
      * @dev 领取活动奖励
      * @param index 活动游标
      * @param user 用于接收奖励的账户地址
      */
-    claim(uint256,address)
+    function claim(uint256,address)
 
     /**
      * @dev 创建活动
@@ -850,39 +887,39 @@
      * @param uint256 活动总奖励 token 数量
      * @param address 活动奖励 token 地址
     */
-    createActivity(uint256,uint256,uint256,uint256,address)
+    function createActivity(uint256,uint256,uint256,uint256,address)
 
     /**
      * @dev 查询合约所有者地址
      * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 活动打卡
      * @param index 活动游标
      */
-    punchIn(uint256)
+    function punchIn(uint256)
 
     /**
      * @dev 放弃合约所有权，合约所有人默认为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 设置金库账户地址
      * @notice onlyOwner
      * @param address 新金库账户地址
      */
-    setTreasury(address)
+    function setTreasury(address)
 
     /**
      * @dev 转移合约所有权至指定地址
      * @notice onlyOwner
      * @prama address 新的所有者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 更新活动配置
@@ -891,19 +928,19 @@
      * @param uint256 活动奖励 token 总量
      * @param address 活动奖励 token 地址
     */
-    updateActivity(uint256,uint256,address)
+    function updateActivity(uint256,uint256,address)
 
     /**
      * @dev 查询用户信息
      * @param uint256 活动游标
      * @param address 用户地址
      * @return {
-     *  lastTimestamp: 上一次打卡时间戳
-     *  amount: 累计打卡次数
-     *  isClaimed: 是否已领取活动奖励
+     *  uint256: 上一次打卡时间戳
+     *  uint256: 累计打卡次数
+     *  bool: 是否已领取活动奖励
      * }
      */
-    userInfo(uint256,address)
+    function userInfo(uint256,address) view returns(uint256,uint256,bool)
 
     /**
      * @dev 所有者创建活动时提交事件
@@ -949,110 +986,115 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
 
 ```js
     /**
+     * @dev constructor
+    */
+    constructor(address _treasury, address _lpToken, address _offeringToken, uint256 _startBlock, uint256 _endBlock, uint256 _offeringAmount, uint256 _raisingAmount)
+
+    /**
      * @dev 查询 IFO 白名单账户地址
      * @param uint256 数组游标
      * @return address
     */
-    addressList(uint256)
+    function addressList(uint256) view returns(address)
 
     /**
      * @dev 质押募集 token，参与 IFO
      * @param uint256 token 数量
     */
-    deposit(uint256)
+    function deposit(uint256)
 
     /**
      * @dev 查询 IFO 结束区块高度
      * @return uint256
     */
-    endBlock()
+    function endBlock() view returns(uint256)
 
     /**
      * @dev 查询白名单数组长度
      * @return uint256
     */
-    getAddressListLength()
+    function getAddressListLength() view returns(uint256)
 
     /**
      * @dev 查询用户当前已购买到的 token 的数量
      * @param address 账户地址
      * @return uint256
     */
-    getOfferingAmount(address)
+    function getOfferingAmount(address) view returns(uint256)
 
     /**
      * @dev 查询用户当前退回募集 token 的数量
      * @param address 账户地址
      * @return uint256
     */
-    getRefundingAmount(address)
+    function getRefundingAmount(address) view returns(uint256)
 
     /**
      * @dev 领取已成功购买 token
     */
-    harvest()
+    function harvest()
 
     /**
      * @dev 查询已领取用户数量
      * @return uint256
     */
-    harvestedCount()
+    function harvestedCount() view returns(uint256)
 
     /**
      * @dev 查询用户是否已领取
      * @param address 账户地址
      * @return address
     */
-    hasHarvest(address)
+    function hasHarvest(address) view returns(address)
 
     /**
      * @dev 查询募集 token 地址
      * @return address
     */
-    lpToken()
+    function lpToken() view returns(address)
 
     /**
      * @dev 查询 IFO 出售 token 总量
      * @return uint256
     */
-    offeringAmount()
+    function offeringAmount() view returns(uint256)
 
     /**
      * @dev 查询 IFO 出售 token 已被领取的总量
      * @return uint256
     */
-    offeringHarvested()
+    function offeringHarvested() view returns(uint256)
 
     /**
      * @dev 查询募集 token 地址
      * @return address
     */
-    offeringToken()
+    function offeringToken() view returns(address)
 
     /**
      * @dev 查询所有者账户地址
      * @return address
     */
-    owner()
+    function owner() view returns(address)
 
     /**
      * @dev 查询预期募集 token 总量
      * @return uint256
     */
-    raisingAmount()
+    function raisingAmount() view returns(uint256)
 
     /**
      * @dev 放弃合约所有权，合约所有人默认为0地址
      * @notice onlyOwner
     */
-    renounceOwnership()
+    function renounceOwnership()
 
     /**
      * @dev 配置 IFO 出售 token 总量
      * @notice onlyOwner
      * @return uint256
     */
-    setOfferingAmount(uint256)
+    function setOfferingAmount(uint256)
 
     /**
      * @dev 配置 IFO 参数
@@ -1061,7 +1103,7 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param uint256 结束块高度
      * @param uint256 募集 token 总量
     */
-    setParams(uint256,uint256,uint256)
+    function setParams(uint256,uint256,uint256)
 
     /**
      * @dev 配置目标地址是否为白名单地址
@@ -1069,7 +1111,7 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param address 目标账户地址
      * @param bool [true: 可参与, false: 禁止参与]
     */
-    setWhite(address,bool)
+    function setWhite(address,bool)
 
     /**
      * @dev 批量配置目标地址是否为白名单地址
@@ -1077,54 +1119,54 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param address[] 数组，元素同上
      * @param bool[] 数组，元素同上
     */
-    setWhites(address[],bool[])
+    function setWhites(address[],bool[])
 
     /**
      * @dev 查询 IFO 开始块高度
-     * @return number
+     * @return uint256
     */
-    startBlock()
+    function startBlock() view returns(uint256)
 
     /**
      * @dev 查询当前已募集 token 总量
      * @return uint256
     */
-    totalAmount()
+    function totalAmount() view returns(uint256)
 
     /**
      * @dev 转移合约所有权至指定地址
      * @prama address 新的所有者地址
     */
-    transferOwnership(address)
+    function transferOwnership(address)
 
     /**
      * @dev 查询金库账户地址
      * @return address
     */
-    treasury()
+    function treasury() view returns(address)
 
     /**
      * @dev 查询用户信息
      * @param address 账户地址
      * @return {
-     *  amount: 质押募集 token 数量
-     *  claimed: 是否已领取购买 token
+     *  uint256: 质押募集 token 数量
+     *  bool: 是否已领取购买 token
      * }
     */
-    userInfo(address)
+    function userInfo(address) view returns(uint256,bool)
 
     /**
      * @dev 查询白名单地址总量
      * @return uint256
     */
-    whiteCount()
+    function whiteCount() view returns(uint256)
 
     /**
      * @dev 查询地址是否为白名单地址
      * @param address 目标账户地址
      * @return bool
     */
-    whiteList(address)
+    function whiteList(address) view returns(bool)
 
     /**
      * @dev 提取合约内 token
@@ -1133,7 +1175,7 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param address 接收者账户地址
      * @param uint256 提取数量
     */
-    withdraw(address,address,uint256)
+    function withdraw(address,address,uint256)
 
     /**
      * @dev 用户质押募集 token 时提交事件
@@ -1149,4 +1191,170 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param refundingAmount uint256 退回的 token 数量
     */
     event Harvest(address indexed user, uint256 offeringAmount, uint256 refundingAmount);
+```
+
+### SinglePool
+
+SinglePool 为单币质押挖矿合约，创建者部署该合约后，可指定质押 token 和 奖励 token 相关配置。 用户可以参与质押挖矿，质押后自动锁仓一段时间，
+锁仓结束，用户可提取质押 token。挖矿奖励可随时提取。
+
+```js
+    /**
+     * @dev constructor
+    */
+    constructor (address _assetsAccount, address _depositToken, address _rewardToken, uint256 _startBlock, uint256 _mintPerBlock, uint256 _lockDuration)
+
+    /**
+     * @dev 查询金库账户地址
+     * @return address
+    */
+    function assetsAccount() view returns(address)
+
+    /**
+     * @dev 质押 token 进行挖矿
+     * @param uint256 质押 token 数量
+     * @param address 质押账户地址
+    */
+    function deposit(uint256,address)
+
+    /**
+     * @dev 查询质押 token 地址
+     * @return address
+    */
+    function depositToken() view returns(address)
+
+    /**
+     * @dev 查询当前质押 token 总量
+     * @return uint256
+    */
+    function depositTokenSupply() view returns(uint256)
+
+    /**
+     * @dev 领取质押挖矿奖励 token
+     * @param address 接收账户地址
+    */
+    function harvest(address)
+
+    /**
+     * @dev 查询质押锁仓时长
+     * @return uint256
+    */
+    function lockDuration() view returns(uint256)
+
+    /**
+     * @dev 查询单个区块产 token 数量
+     * @return uint256
+    */
+    function mintPerBlock() view returns(uint256)
+
+    /**
+     * @dev 查询合约所有者地址
+     * @return address
+    */
+    function owner() view returns(address)
+
+    /**
+     * @dev 查询用户可领取奖励 token 数量
+     * @param address 账户地址
+     * @return uint256
+    */
+    function pendingReward(address) view returns(uint256)
+
+    /**
+     * @dev 查询当前挖矿待产出奖励 token 总量
+     * @return {
+     *  uint256: 待产出总量
+     *  uint256: 当前区块高度
+     * }
+    */
+    function pendingRewardInfo() view returns(uint256,uint256)
+
+    /**
+     * @dev 放弃合约所有权，合约所有人默认为0地址
+     * @notice onlyOwner
+    */
+    function renounceOwnership()
+
+    /**
+     * @dev 查询奖励 token 地址
+     * @return address
+    */
+    function rewardToken() view returns(address)
+
+    /**
+     * @dev 配置金库账户地址
+     * @notice onlyOwner
+     * @param address 新金库账户地址
+    */
+    function setAssetsAccount(address)
+
+    /**
+     * @dev 配置单个区块产奖励 token 数量
+     * @notice onlyOwner
+     * @param uint256 token 数量
+    */
+    function setEmissionRate(uint256)
+
+    /**
+     * @dev 配置锁仓时长
+     * @notice onlyOwner
+     * @param uint256 新锁仓时长
+    */
+    function setLockDuration(uint256)
+
+    /**
+     * @dev 查询质押活动开始区块高度
+     * @return uint256
+    */
+    function startBlock() view returns(uint256)
+
+    /**
+     * @dev 转移合约所有权至指定地址
+     * @prama address 新的所有者地址
+    */
+    function transferOwnership(address)
+
+    /**
+     * @dev 查询用户质押挖矿信息
+     * @param address 账户地址
+     * @return {
+     *  uint256: 质押 token 数量
+     *  uint256: 解锁时间戳
+     *  uint256: 合约内数据
+     * }
+    */
+    function userInfo(address) view returns(uint256,uint256,uint256)
+
+    /**
+     * @dev 提取质押 token 
+     * @notice 提取质押 token 同时触发奖励领取操作
+     * @param uint256 提取 token 数量
+     * @param address 接收者账户地址
+     */
+    function withdraw(uint256,address)
+
+    /**
+     * @dev 用户质押时提交事件
+     * @param user address caller 账户地址
+     * @param to address 质押账户地址
+     * @param amount uint256 质押 token 数量
+     * @param unlockTime uint256 解锁时间戳
+    */
+    event Deposit(address indexed user, address indexed to, uint256 amount, uint256 unlockTime);
+
+    /**
+     * @dev 用户提取时提交事件
+     * @param user address caller 账户地址
+     * @param to address 接受者账户地址
+     * @param amount uint256 质押 token 数量
+    */
+    event Withdraw(address indexed user, address indexed to, uint256 amount);
+
+    /**
+     * @dev 用户领取挖矿奖励时提交事件
+     * @param user address caller 账户地址
+     * @param to address 接收者账户地址
+     * @param amount uint256 奖励 token 数量
+    */
+    event Harvest(address indexed user, address indexed to, uint256 amount);
 ```
