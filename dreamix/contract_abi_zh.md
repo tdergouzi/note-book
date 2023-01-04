@@ -1,4 +1,5 @@
-## Interface Doc
+
+## Contract ABI
 
 ### ERC20Token
 
@@ -942,135 +943,210 @@
 
 ### IFO
 
+IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 token，同时配置相关总量。白名单用户质押募集 token 参与 IFO，
+活动结束合约自动根据目标募集 token 总量和实际募集总量计算每位用户实际能购买的 token 数量。用户实际购买数量少于预期数量，
+会自动返回多余的募集 token。
+
 ```js
     /**
-     * @dev 设置白名单
-     * @notice 拥有者权限调用
-     * @param user string 被添加账户地址
-     * @param value bool [true: 可参加，false: 无法参加]
-     */
-    setWhite(user, value)
-
+     * @dev 查询 IFO 白名单账户地址
+     * @param uint256 数组游标
+     * @return address
+    */
+    addressList(uint256)
 
     /**
-     * @dev 批量设置白名单
-     * @notice 拥有者权限调用
-     * @param user string 被添加账户地址数组
-     * @param value bool value 数组
-     */
-    setWhites(users, values)
-
+     * @dev 质押募集 token，参与 IFO
+     * @param uint256 token 数量
+    */
+    deposit(uint256)
 
     /**
-     * @dev 设置 ifo 出售 token 总量
-     * @notice 拥有者权限调用
-     * @param offerAmount number 新的出售 token 总量
-     */
-    setOfferingAmount(offerAmount)
-
+     * @dev 查询 IFO 结束区块高度
+     * @return uint256
+    */
+    endBlock()
 
     /**
-     * @dev 设置 ifo 配置
-     * @notice 拥有者权限调用
-     * @param startBlock number ifo 开始块高度
-     * @param endBlock number ifo 结束块高度
-     * @param raisingAmount number ifo 募集 token 总量
-     */
-    setParams(startBlock, endBlock, raisingAmount)
-
-
-    /**
-     * @dev 提取募集 token
-     * @notice 拥有者权限调用
-     * @param token string 提取 token 地址
-     * @param to string 账户地址用于接收提取的 token
-     * @param amount number 提取数量
-     */
-    withdraw(token, to, amount)
-
-
-    /**
-     * @dev 查询 ifo 配置信息
-     * @return {
-     *  treasury: 金库合约地址
-     *  lpToken: 待募集 token 地址
-     *  offeringToken: 被出售 token 地址
-     *  startBlock: 活动开始块高度
-     *  endBlock: 活动结束块高度
-     *  raisingAmount: 募集 token 总量
-     *  offeringAmount: 出售 token 总量 
-     *  totalAmount: 已募集 token 总量
-     *  offeringHarvested: 已售出 token 总量
-     *  whiteCount: 白名单总人数
-     *  harvestedCount: 已领取总人数
-     * }
-     */
-    ifoInfo()
-
-
-    /**
-     * @dev 质押募集 token，参与 ifo
-     * @param amount number 募集 token 数量
-     */
-    deposit(amount)
-
-
-    /**
-     * @dev 领取被出售 token
-     */
-    harvest()
-
-
-    /**
-     * @dev 查询用户是否已领取
-     * @param user string 账户地址
-     */
-    hasHarvest(user)
-
+     * @dev 查询白名单数组长度
+     * @return uint256
+    */
+    getAddressListLength()
 
     /**
      * @dev 查询用户当前已购买到的 token 的数量
-     * @param user string 账户地址
-     */
-    getOfferingAmount(user)
-
+     * @param address 账户地址
+     * @return uint256
+    */
+    getOfferingAmount(address)
 
     /**
      * @dev 查询用户当前退回募集 token 的数量
-     * @param user string 账户地址
-     */
-    getRefundingAmount(user)
-
-
-    /**
-     * @dev 查询用户是否能领取已购买的 token
-     * @param user string 账户地址
-     */
-    canHarvest(user)
-
+     * @param address 账户地址
+     * @return uint256
+    */
+    getRefundingAmount(address)
 
     /**
-     * @dev 查询用户是否在 ifo 白名单内
-     * @param user string 账户地址
-     */
-    isInWhiteList(user)
-
+     * @dev 领取已成功购买 token
+    */
+    harvest()
 
     /**
-     * @dev 查询用户 ifo 信息
-     * @param user string 账户地址
+     * @dev 查询已领取用户数量
+     * @return uint256
+    */
+    harvestedCount()
+
+    /**
+     * @dev 查询用户是否已领取
+     * @param address 账户地址
+     * @return address
+    */
+    hasHarvest(address)
+
+    /**
+     * @dev 查询募集 token 地址
+     * @return address
+    */
+    lpToken()
+
+    /**
+     * @dev 查询 IFO 出售 token 总量
+     * @return uint256
+    */
+    offeringAmount()
+
+    /**
+     * @dev 查询 IFO 出售 token 已被领取的总量
+     * @return uint256
+    */
+    offeringHarvested()
+
+    /**
+     * @dev 查询募集 token 地址
+     * @return address
+    */
+    offeringToken()
+
+    /**
+     * @dev 查询所有者账户地址
+     * @return address
+    */
+    owner()
+
+    /**
+     * @dev 查询预期募集 token 总量
+     * @return uint256
+    */
+    raisingAmount()
+
+    /**
+     * @dev 放弃合约所有权，合约所有人默认为0地址
+     * @notice onlyOwner
+    */
+    renounceOwnership()
+
+    /**
+     * @dev 配置 IFO 出售 token 总量
+     * @notice onlyOwner
+     * @return uint256
+    */
+    setOfferingAmount(uint256)
+
+    /**
+     * @dev 配置 IFO 参数
+     * @notice onlyOwner
+     * @param uint256 开始块高度
+     * @param uint256 结束块高度
+     * @param uint256 募集 token 总量
+    */
+    setParams(uint256,uint256,uint256)
+
+    /**
+     * @dev 配置目标地址是否为白名单地址
+     * @notice onlyOwner
+     * @param address 目标账户地址
+     * @param bool [true: 可参与, false: 禁止参与]
+    */
+    setWhite(address,bool)
+
+    /**
+     * @dev 批量配置目标地址是否为白名单地址
+     * @notice onlyOwner
+     * @param address[] 数组，元素同上
+     * @param bool[] 数组，元素同上
+    */
+    setWhites(address[],bool[])
+
+    /**
+     * @dev 查询 IFO 开始块高度
+     * @return number
+    */
+    startBlock()
+
+    /**
+     * @dev 查询当前已募集 token 总量
+     * @return uint256
+    */
+    totalAmount()
+
+    /**
+     * @dev 转移合约所有权至指定地址
+     * @prama address 新的所有者地址
+    */
+    transferOwnership(address)
+
+    /**
+     * @dev 查询金库账户地址
+     * @return address
+    */
+    treasury()
+
+    /**
+     * @dev 查询用户信息
+     * @param address 账户地址
      * @return {
-     *  amount: 已质押募集 token 数量
-     *  claimed: 是否已领取
-     *  offer: 已购买到的 token 的数量
-     *  refund: 当前退回募集 token 的数量
-     *  canHarvest: 是否能领取
+     *  amount: 质押募集 token 数量
+     *  claimed: 是否已领取购买 token
      * }
-     */
-    userInfo(user)
+    */
+    userInfo(address)
+
+    /**
+     * @dev 查询白名单地址总量
+     * @return uint256
+    */
+    whiteCount()
+
+    /**
+     * @dev 查询地址是否为白名单地址
+     * @param address 目标账户地址
+     * @return bool
+    */
+    whiteList(address)
+
+    /**
+     * @dev 提取合约内 token
+     * @notice onlyOwner
+     * @param address token 地址
+     * @param address 接收者账户地址
+     * @param uint256 提取数量
+    */
+    withdraw(address,address,uint256)
+
+    /**
+     * @dev 用户质押募集 token 时提交事件
+     * @param user address 质押账户地址
+     * @param amount uint256 质押 token 数量
+    */
+    event Deposit(address indexed user, uint256 amount);
+
+    /**
+     * @dev 用户领取已购买 token 时提交事件
+     * @param user address 领取账户地址
+     * @param offeringAmount uint256 已购买的 token 数量
+     * @param refundingAmount uint256 退回的 token 数量
+    */
+    event Harvest(address indexed user, uint256 offeringAmount, uint256 refundingAmount);
 ```
-
-
-### SinglePool
-
-```js

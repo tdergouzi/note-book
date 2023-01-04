@@ -1,5 +1,9 @@
 
+## Contract SDK
+
 ### Factory
+
+Factory 为合约工厂模块，用于用户自行部署对应的合约。
 
 ```js
     /**
@@ -76,6 +80,8 @@
 
 ### ERC20Token
 
+ERC20Token 基础 20 token 合约。目前该合约增发权限仅创建者。
+
 ```js
     /**
      * @dev 增发 token
@@ -130,6 +136,8 @@
 
 
 ### ERC721Token
+
+ERC721Token 基础 721 类型 NFT 合约。目前该合约增发权限仅创建者。
 
 ```js
     /**
@@ -235,6 +243,8 @@
 
 
 ### ERC1155Token
+
+ERC1155Token 基础 1155 类型 NFT 合约。目前该合约增发权限仅创建者。
 
 ```js
     /**
@@ -345,6 +355,8 @@
 
 
 ### NFTEnglishAuction
+
+NFTEnglishAuction 为 NFT 英式拍卖售卖市场合约，创建者部署合约后，用户可自由在本合约内交易 NFT 英式拍卖单。用户可参与订单竞拍，最终订单结束，最高出价者购得 NFT。
 
 ```js
     /**
@@ -560,6 +572,8 @@
 
 ### NFTFixedswap
 
+NFTFixedswap 为 NFT 定价售卖市场合约，创建者部署合约后，用户可自由在本合约内交易 NFT 定价单。
+
 ```js
     /**
      * @dev 设置是否禁止挂售721 nft
@@ -696,6 +710,9 @@
 
 ### ActivityPunchIn
 
+ActivityPunchIn 为活动打卡合约，创建者部署合约后可创建打卡活动，指定打卡开始结束时间，合约默认24小时内只能打卡一次，创建者可配置最低打卡次数和总奖励 token 数量
+用户直接参与打卡，最后根据活动实际打卡完成总人数，平分总奖励 token。
+
 ```js
     /**
      * @dev 设置金库账户地址
@@ -756,6 +773,10 @@
 
 
 ### IFO
+
+IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 token，同时配置相关总量。白名单用户质押募集 token 参与 IFO，
+活动结束合约自动根据目标募集 token 总量和实际募集总量计算每位用户实际能购买的 token 数量。用户实际购买数量少于预期数量，
+会自动返回多余的募集 token。
 
 ```js
     /**
@@ -888,6 +909,9 @@
 
 ### SinglePool
 
+SinglePool 为单币质押挖矿合约，创建者部署该合约后，可指定质押 token 和 奖励 token 相关配置。 用户可以参与质押挖矿，质押后自动锁仓一段时间，
+锁仓结束，用户可提取质押 token。挖矿奖励可随时提取。
+
 ```js
     /**
      * @dev 设置产矿数率
@@ -914,61 +938,85 @@
 
 
     /**
-     * @dev 
+     * @dev 查询质押 token 信息
+     * @return {
+     *  name: 名称
+     *  symbol: 符号
+     *  decimals：位数
+     * }
      */
     getDepositTokenInfo()
 
 
     /**
-     * @dev 
+     * @dev 查询奖励 token 信息
+     * @return {
+     *  name: 名称
+     *  symbol: 符号
+     *  decimals：位数
+     * }
      */
     getRewardTokenInfo()
     
 
     /**
-     * @dev 
+     * @dev 查询用户质押 token 批准给单币挖矿合约的额度
+     * @param user string 用户地址
      */
-    allowance()
+    allowance(user)
      
 
     /**
-     * @dev 
+     * @dev 批准质押 token 给单币挖矿合约
      */
     approve()
     
 
     /**
-     * @dev 
+     * @dev 查询用户质押 token 余额
+     * @param user string 用户地址
      */
-    balance()
+    balance(user)
 
 
     /**
-     * @dev 
+     * @dev 查询当前总质押量
      */
-    getSinglePoolInfo()
+    getDepositTotalSupply()
 
 
     /**
-     * @dev 
+     * @dev 查询用户信息
+     * @param user string 用户地址
+     * @return {
+     *  depositTokenAllowance: 用户质押 token 批准额度
+     *  lockedAmount: 质押数量
+     *  unlockTime: 解锁时间戳
+     *  pendingAmount: 可领取奖励 token 数量
+     *  balnace: 用户质押 token 余额
+     * }
      */
     getUserInfo()
 
 
     /**
-     * @dev 
+     * @dev 质押 token 进行挖矿
+     * @notice 调用该方法之前，必须先将质押 token 批准给本合约
+     * @param amount number 质押 token 数量
      */
     deposit(amount)
 
 
     /**
-     * @dev 
+     * @dev 提取质押 token 
+     * @notice 提取质押 token 同时触发奖励领取操作
+     * @param amount number 待领取质押 token 数量
      */
     withdraw(amount)
 
 
     /**
-     * @dev 
+     * @dev 领取质押挖矿奖励 token
      */
     harvest()
 ```
