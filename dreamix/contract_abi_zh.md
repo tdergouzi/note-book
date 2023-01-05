@@ -988,7 +988,7 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
     /**
      * @dev constructor
     */
-    constructor(address _treasury, address _lpToken, address _offeringToken, uint256 _startBlock, uint256 _endBlock, uint256 _offeringAmount, uint256 _raisingAmount)
+    constructor(address _treasury, address _lpToken, address _offeringToken, uint256 _startTimestamp, uint256 _endTimestamp, uint256 _offeringAmount, uint256 _raisingAmount)
 
     /**
      * @dev 查询 IFO 白名单账户地址
