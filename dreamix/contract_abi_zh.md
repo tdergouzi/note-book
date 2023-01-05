@@ -1004,10 +1004,10 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
     function deposit(uint256)
 
     /**
-     * @dev 查询 IFO 结束区块高度
+     * @dev 查询 IFO 结束时间戳
      * @return uint256
     */
-    function endBlock() view returns(uint256)
+    function endTimestamp() view returns(uint256)
 
     /**
      * @dev 查询白名单数组长度
@@ -1106,26 +1106,10 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
     function setParams(uint256,uint256,uint256)
 
     /**
-     * @dev 配置目标地址是否为白名单地址
-     * @notice onlyOwner
-     * @param address 目标账户地址
-     * @param bool [true: 可参与, false: 禁止参与]
-    */
-    function setWhite(address,bool)
-
-    /**
-     * @dev 批量配置目标地址是否为白名单地址
-     * @notice onlyOwner
-     * @param address[] 数组，元素同上
-     * @param bool[] 数组，元素同上
-    */
-    function setWhites(address[],bool[])
-
-    /**
-     * @dev 查询 IFO 开始块高度
+     * @dev 查询 IFO 开始时间戳
      * @return uint256
     */
-    function startBlock() view returns(uint256)
+    function startTimestamp() view returns(uint256)
 
     /**
      * @dev 查询当前已募集 token 总量
@@ -1154,19 +1138,6 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * }
     */
     function userInfo(address) view returns(uint256,bool)
-
-    /**
-     * @dev 查询白名单地址总量
-     * @return uint256
-    */
-    function whiteCount() view returns(uint256)
-
-    /**
-     * @dev 查询地址是否为白名单地址
-     * @param address 目标账户地址
-     * @return bool
-    */
-    function whiteList(address) view returns(bool)
 
     /**
      * @dev 提取合约内 token
