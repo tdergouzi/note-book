@@ -774,29 +774,11 @@ ActivityPunchIn 为活动打卡合约，创建者部署合约后可创建打卡�
 
 ### IFO
 
-IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 token，同时配置相关总量。白名单用户质押募集 token 参与 IFO，
+IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 token，同时配置相关总量。用户质押募集 token 参与 IFO，
 活动结束合约自动根据目标募集 token 总量和实际募集总量计算每位用户实际能购买的 token 数量。用户实际购买数量少于预期数量，
 会自动返回多余的募集 token。
 
 ```js
-    /**
-     * @dev 设置白名单
-     * @notice 拥有者权限调用
-     * @param user string 被添加账户地址
-     * @param value bool [true: 可参加，false: 无法参加]
-     */
-    setWhite(user, value)
-
-
-    /**
-     * @dev 批量设置白名单
-     * @notice 拥有者权限调用
-     * @param user string 被添加账户地址数组
-     * @param value bool value 数组
-     */
-    setWhites(users, values)
-
-
     /**
      * @dev 设置 ifo 出售 token 总量
      * @notice 拥有者权限调用
@@ -808,11 +790,11 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
     /**
      * @dev 设置 ifo 配置
      * @notice 拥有者权限调用
-     * @param startBlock number ifo 开始块高度
-     * @param endBlock number ifo 结束块高度
+     * @param startTimestamp number ifo 开始时间戳
+     * @param endTimestamp number ifo 结束时间戳
      * @param raisingAmount number ifo 募集 token 总量
      */
-    setParams(startBlock, endBlock, raisingAmount)
+    setParams(startTimestamp, endTimestamp, raisingAmount)
 
 
     /**
@@ -831,13 +813,12 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      *  treasury: 金库合约地址
      *  lpToken: 待募集 token 地址
      *  offeringToken: 被出售 token 地址
-     *  startBlock: 活动开始块高度
-     *  endBlock: 活动结束块高度
+     *  startTimestamp: 活动开始时间戳
+     *  endTimestamp: 活动结结束时间戳
      *  raisingAmount: 募集 token 总量
      *  offeringAmount: 出售 token 总量 
      *  totalAmount: 已募集 token 总量
      *  offeringHarvested: 已售出 token 总量
-     *  whiteCount: 白名单总人数
      *  harvestedCount: 已领取总人数
      * }
      */
@@ -883,13 +864,6 @@ IFO 为募集合约，创建者指定待募集 token 和本次 IFO 出售的 tok
      * @param user string 账户地址
      */
     canHarvest(user)
-
-
-    /**
-     * @dev 查询用户是否在 ifo 白名单内
-     * @param user string 账户地址
-     */
-    isInWhiteList(user)
 
 
     /**
