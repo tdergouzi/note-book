@@ -1,6 +1,11 @@
 
 ## Contract SDK
 
+```
+注释中 @notice onlyOwner 表示该接口只允许合约所有者调用
+
+```
+
 ### Factory
 
 Factory 为合约工厂模块，用于用户自行部署对应的合约。

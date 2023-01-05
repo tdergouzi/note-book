@@ -4,6 +4,8 @@
 ```
 接口按照接口首字母顺序 A-Z 排序
 
+注释中 @notice onlyOwner 表示该接口只允许合约所有者调用
+
 合约内数据与用户无关
 ```
 
@@ -616,11 +618,32 @@
     function setDisableErc721(bool)
 
     /**
+     * @dev 设置交易手续费费率 eg: 100% = 1e18, 1% = 1e16, 0.1% = 1e15
+     * @notice onlyOwner
+    */
+    function setTxFeeRate(uint256)
+
+    /**
      * @dev 转移合约所有权至指定地址
      * @notice onlyOwner
      * @prama address 新的所有者地址
     */
     function transferOwnership(address)
+
+    /**
+     * @dev 查询交易手续费费率 eg: 1e18 = 100%, 1e16 = 1%, 1e15 = 0.1% 
+     * @return uint256
+    */
+    function txFeeRatio() view returns(uint256)
+
+    /**
+     * @dev 提取合约内手续费
+     * @notice onlyOwner
+     * @param address 提取 token 地址
+     * @param address 接收者账户地址
+     * @param uint256 提取数量
+    */
+    function withdrawFee(address,address,uint256)
 
     /**
      * @dev 创建挂单时提交事件
@@ -774,6 +797,12 @@
     function setDisableErc721(bool)
 
     /**
+     * @dev 设置交易手续费费率 eg: 100% = 1e18, 1% = 1e16, 0.1% = 1e15
+     * @notice onlyOwner
+    */
+    function setTxFeeRate(uint256)
+
+    /**
      * @dev 购买挂单
      * @notice 如果挂单换入 token 的合约地址不等于0地址, 出价前要求换入 token 已批准给挂单合约
      * @notice 可部分购买，换取等比例数量的换出 token
@@ -808,6 +837,21 @@
      * @prama address 新的所有者地址
     */
     function transferOwnership(address)
+
+    /**
+     * @dev 查询交易手续费费率 eg: 1e18 = 100%, 1e16 = 1%, 1e15 = 0.1% 
+     * @return uint256
+    */
+    function txFeeRatio() view returns(uint256)
+
+    /**
+     * @dev 提取合约内手续费
+     * @notice onlyOwner
+     * @param address 提取 token 地址
+     * @param address 接收者账户地址
+     * @param uint256 提取数量
+    */
+    function withdrawFee(address,address,uint256)
 
     /**
      * @dev 创建挂单时提交事件
