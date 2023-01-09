@@ -184,66 +184,71 @@ github.com: https://github.com/burgerswap-org/meta-verse-nft-protocol
 ### ERC1155Token 
 ```js
     /**
-     * @dev 查询 token 基础 URI
+     * @dev 查询 nft baseURI
+     * @param uint256 tokenId 直接传 0
+     * @return string
     */
-    function uri(uint256 id) view returns (string memory);
+    function uri(uint256) view returns (string memory);
 
     /**
      * @dev 查询 tokenURI(元数据)
      * @param tokenId uint256 tokenId
+     * @return string
     */
-    function tokenURI(uint256 tokenId) view returns (string memory);
+    function tokenURI(uint256) view returns (string memory);
 
     /**
-     * @dev 根据 tokenId, 查询用户 token 的数量
-     * @param account address 账户地址 
-     * @param id uint256 ERC1155 token 唯一标识符
+     * @dev 根据 tokenId, 查询用户 nft 的数量
+     * @param address 账户地址 
+     * @param uint256 ERC1155 nft 唯一标识符
+     * @return uint256
     */
-    function balanceOf(address account, uint256 id) view returns (uint256);
+    function balanceOf(address,uint256) view returns (uint256);
 
     /**
-     * @dev 批量查询用户 token 的数量
-     * @notice 要求 accounts ids 数组长度一致
-     * @param accounts address[] 账户地址数组
-     * @param ids uint256[] ERC1155 token 唯一标识符
+     * @dev 批量查询用户 nft 的数量
+     * @param address[] 账户地址数组
+     * @param uint256[] ERC1155 nft 唯一标识符
+     * @return uint256[]
     */
-    function balanceOfBatch(address[] calldata accounts, uint256[] calldata ids) view returns (uint256[] memory);
+    function balanceOfBatch(address[],uint256[]) view returns (uint256[] memory);
 
     /**
-     * @dev 查询操作者地址是否拥有指定账户所有 token 的转移权限
-     * @param account address token 拥有者账户地址
-     * @param operator address 操作者账户地址
+     * @dev 查询操作者地址是否拥有指定账户所有 nft 的转移权限
+     * @param address nft 拥有者账户地址
+     * @param address 操作者账户地址
+     * @return bool
     */
-    function isApprovedForAll(address account, address operator) view returns (bool);
+    function isApprovedForAll(address,address) view returns (bool);
 
     /**
-     * @dev 设置调用者所拥有的 token 的转移权限
-     * @param operator address 操作者账户地址
-     * @param approved bool  批准状态 [true: 批准, false: 未批准]
+     * @dev 设置调用者所拥有的 nft 的转移权限
+     * @param address 操作者账户地址
+     * @param bool  批准状态 [true: 批准, false: 未批准]
     */
-    function setApprovalForAll(address operator, bool approved);
+    function setApprovalForAll(address,bool);
 
     /**
-     * @dev 从转出账户地址转移指定数量的 token 至接收账户地址
+     * @dev 从转出账户地址转移指定数量的 nft 至接收账户地址
      * @notice 要求调用者拥有转出账户的批准，或者调用者为转出账户
-     * @param from address 转出账户地址
-     * @param to address 接受账户地址
-     * @param id uint256 tokenId
-     * @param amount uint256 转移数量
-     * @param data string 交易信息，可为空 "0x"
+     * @param address 转出账户地址
+     * @param address 接受账户地址
+     * @param uint256 tokenId
+     * @param uint256 转移数量
+     * @param string 交易信息，可为空 "0x"
     */
-    function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes calldata data);
+    function safeTransferFrom(address,address,uint256,uint256,bytes);
 
     /**
-     * @dev 批量从转出账户地址转移不同数量的不同 token 至接收账户地址
+     * @dev 批量从转出账户地址转移不同数量的不同 nft 至接收账户地址
      * @notice 要求调用者拥有转出账户的批准，或者调用者为转出账户
-     * @param from address 转出账户地址
-     * @param to address 接受账户地址
-     * @param ids uint256[] tokenId 数组
-     * @param amounts uint256[] 转移数量数组
-     * @param data string 交易信息，可为空 "0x"
+     * @param address 转出账户地址
+     * @param address 接受账户地址
+     * @param uint256[] tokenId 数组
+     * @param uint256[] 转移数量数组
+     * @param string 交易信息，可为空 "0x"
     */
-    function safeBatchTransferFrom(address from, address to, uint256[] calldata ids, uint256[] calldata amounts, bytes calldata data);
+    function safeBatchTransferFrom(address,address,uint256[],uint256[],bytes);
 
     /**
      * @dev safeBatchTransferFrom mint mintAmount burn 提交事件
@@ -270,120 +275,108 @@ github.com: https://github.com/burgerswap-org/meta-verse-nft-protocol
 ```js
     /**
      * @dev 查询 NFT 证书链接
+     * @return string
     */
     function getLicenseURI() view returns (string memory);
 
     /**
      * @dev 查询 NFT 证书名称
+     * @return string
     */
     function getLicenseName() view returns (string memory);
 
     /**
      * @dev 查询账户 tokenIds
-     * @param user address 账户地址
-     * @param cursor uint256 起始游标
-     * @param size uint256 获取数量
+     * @param address 账户地址
+     * @param uint256 起始游标
+     * @param uint256 获取数量
+     * @return uint256[] tokenId 数组
+     * @return uint256 下一个起始游标
     */
-    function tokensOfOwnerBySize(address user, uint256 cursor, uint256 size) view returns (uint256[] memory, uint256);
+    function tokensOfOwnerBySize(address,uint256,uint256) view returns (uint256[] memory,uint256);
 
     /**
-     * @dev 配置基础 URI，如果存在则作为每个 tokenURI 的前缀
-     * @notice 根据 NFT 的创建 mode，进行接口调用权限管理.
-     * 例如 mode = 0, 则只能由创建者账户调用
-     * @param _baseURI string
+     * @dev 增发一个 nft
+     * @param address 接受者账户地址，用于接受增发的 token
+     * @param string NFT元数据
     */
-    function setBaseURI(string memory _baseURI);
+    function mint(address,string memory);
 
     /**
-     * @dev 增发一个 token
-     * @notice 根据 NFT 的创建 mode，进行接口调用权限管理.
-     * 例如 mode = 0, 则只能由创建者账户调用
-     * @param to address 接受者账户地址，用于接受增发的 token
-     * @param tokenURI string NFT元数据
+     * @dev 批量增发 nft
+     * @param address 接受者账户地址，用于接受增发的 token
+     * @param uint256 增发数量
+     * @param string[] NFT 元数据数组
     */
-    function mint(address to, string memory tokenURI);
+    function batchMint(address,uint256,string[] memory)；
 
     /**
-     * @dev 批量增发 token
-     * @notice 根据 NFT 的创建 mode，进行接口调用权限管理.
-     * 例如 mode = 0, 则只能由创建者账户调用
-     * 从起始至结束，单调递增，过程中出现与已有重复则全部增发失败
-     * @param to address 接受者账户地址，用于接受增发的 token
-     * @param amount uint256 增发数量
-     * @param tokenURIs string[] NFT 元数据数组
+     * @dev 销毁本账户 nft
+     * @param uint256 nft tokenId
     */
-    function batchMint(address to, uint256 amount, string[] memory tokenURIs) external；
-
-    /**
-     * @dev 配置基础 URI，如果存在则作为每个 tokenURI 的前缀
-     * @notice 根据 NFT 的创建 mode，进行接口调用权限管理，且只能烧毁本人 token。
-     * @param tokenId uint256 指定的 tokenId，要求不可重复
-    */
-    function burn(uint256 tokenId);
+    function burn(uint256);
 ```
 
 ### AssetERC1155 is ERC1155Token 
 ```js
     /**
      * @dev 查询 NFT 证书链接
+     * @return string
     */
     function getLicenseURI() view returns (string memory);
 
     /**
      * @dev 查询 NFT 证书名称
+     * @return string
     */
     function getLicenseName() view returns (string memory);
 
     /**
-     * @dev 查询 token 基础 URI
+     * @dev 查询 nft baseURI
+     * @param uint256 nft tokenId 直接传0
+     * @return string
     */
-    function uri(uint256 id) view returns (string memory);
+    function uri(uint256) view returns (string memory);
 
     /**
      * @dev 查询 tokenURI(元数据)
-     * @param tokenId uint256 tokenId
+     * @param uint256 tokenId
+     * @return string
     */
-    function tokenURI(uint256 tokenId) view returns (string memory);
+    function tokenURI(uint256) view returns (string memory);
 
     /**
-     * @dev 设置所有类型 token 的基础 URI
-     * @param uri string 
+     * @dev 向指定账户中增发指定类型的 nft tokenId, 增发数量）
+     * @param address 接受者账户地址
+     * @param uint256 增发数量
+     * @param string NFT 元数据
     */
-    function setURI(string memory uri);
+    function mint(address,uint256,string memory);
 
     /**
-     * @dev 向指定账户中增发指定类型的 token（创建 tokenId, 增发数量）
-     * @param to address 接受者账户地址
-     * @param amount uint256 增发数量
-     * @param tokenURI string NFT 元数据
+     * @dev 向指定账户增发已存在 nft 的数量
+     * @param address 接受者账户地址
+     * @param uint256 tokenId
+     * @param uint256 增发数量
     */
-    function mint(address to, uint256 amount, string memory tokenURI_);
+    function mintAmount(address,uint256,uint256);
 
     /**
-     * @dev 向指定账户增发已存在 tokenId 的数量
-     * @param to address 接受者账户地址
-     * @param id uint256 tokenId
-     * @param amount uint256 增发数量
+     * @dev 批量向指定账户中增发指定范围类型的 nft
+     * @param address 接受者账户地址
+     * @param uint256 增发 tokenId 的数量
+     * @param uint256[] 每个 tokenId 增发个数的数组
+     * @param string[] NFT 元数据数组
     */
-    function mintAmount(address to, uint256 id, uint256 amount);
+    function batchMint(address,uint256,uint256[] memory,string[] memory);
 
     /**
-     * @dev 批量向指定账户中增发指定范围类型的 token
-     * @param to string 接受者账户地址
-     * @param tokenIdAmount uint256 增发 tokenId 的数量
-     * @param amounts uint256[] 每个 tokenId 增发个数的数组
-     * @param tokenURIs string[] NFT 元数据数组
+     * @dev 销毁 nft
+     * @param address string 被销毁账户地址
+     * @param uint256 nft tokenId
+     * @param uint256 销毁数量
     */
-    function batchMint(address to, uint256 tokenIdAmount, uint256[] memory amounts, string[] memory tokenURIs);
-
-    /**
-     * @dev 销毁token
-     * @notice 要求调用者拥有被销毁账户的批准，或者调用者为被销毁账户
-     * @param account string 被销毁账户地址
-     * @param id uint256 token 类型 id
-     * @param amount uint256 销毁数量
-    */
-    function burn(address account, uint256 id, uint256 amount);
+    function burn(address,uint256,uint256);
 ```
 
 ### NFTEnglishAuction
