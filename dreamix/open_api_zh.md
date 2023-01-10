@@ -167,7 +167,7 @@ response
 
 ## ERC721Token
 
-#### info
+### info
 
 desc: get token infomation - name symbol
 
@@ -209,7 +209,7 @@ response
 ```
 - - -
 
-#### balanceOf
+### balanceOf
 
 desc: get user token amount
 
@@ -249,7 +249,7 @@ response
 ```
 - - -
 
-#### totalSupply
+### totalSupply
 
 desc: get amount of all token
 
@@ -287,7 +287,7 @@ response
 ```
 - - -
 
-#### tokenOfOwnerByIndex
+### tokenOfOwnerByIndex
 
 desc: get tokenId by the index of user's token array
 
@@ -329,7 +329,7 @@ response
 ```
 - - -
 
-#### tokensOfOwnerBySize
+### tokensOfOwnerBySize
 
 desc: batch get user's tokenIds
 
@@ -377,7 +377,7 @@ response
 ```
 - - -
 
-#### tokenURI
+### tokenURI
 
 desc: get token uri (metadata)
 
@@ -415,7 +415,7 @@ response
 ```
 - - -
 
-#### ownerOf
+### ownerOf
 
 desc: get the owner address of token
 
@@ -455,7 +455,7 @@ response
 ```
 - - -
 
-#### isApprovedForAll
+### isApprovedForAll
 
 desc: check if the user approved all of tokens to spender
 
@@ -498,7 +498,7 @@ response
 ```
 - - -
 
-#### getApproved
+### getApproved
 
 desc: get the spender address of owner, if not exist, return zero address (0x0000...)
 
@@ -541,7 +541,7 @@ response
 
 ## ERC1155
 
-#### uri
+### uri
 
 desc: get ERC1155 base uri
 
@@ -579,7 +579,7 @@ respnse
 ```
 - - -
 
-#### balanceOf
+### balanceOf
 
 desc: get amount of token in tokenId
 
@@ -621,7 +621,7 @@ respnse
 ```
 - - -
 
-#### balanceOfBatch
+### balanceOfBatch
 
 desc: batch get token amount array of token in tokenIds
 
@@ -672,7 +672,7 @@ respnse
 ```
 - - -
 
-#### isApprovedForAll
+### isApprovedForAll
 
 desc: check if the user approved all token to spender
 
@@ -717,7 +717,7 @@ respnse
 
 ## NFTEnglishAuction
 
-#### getPoolCount
+### getPoolCount
 
 desc: get count of all pool in EnglishAuction contract
 
@@ -753,7 +753,7 @@ respnse
 ```
 - - -
 
-#### getPoolBaseInfo
+### getPoolBaseInfo
 
 desc: get pool base info, includes creator amount 
 
@@ -806,7 +806,7 @@ respnse
 ```
 - - -
 
-#### getPoolDynamicInfo
+### getPoolDynamicInfo
 
 desc: get pool trade info
 
@@ -850,7 +850,7 @@ respnse
 ```
 - - -
 
-#### isCreator
+### isCreator
 
 desc: check if the user is the pool's creator
 
@@ -889,7 +889,7 @@ respnse
 ```
 - - -
 
-#### myBidderAmount1Pool
+### myBidderAmount1Pool
 
 desc: get user bid amount
 
@@ -928,7 +928,7 @@ respnse
 ```
 - - -
 
-#### getConfig
+### getConfig
 
 desc: get EnglishAuction contract config
 
@@ -972,7 +972,7 @@ respnse
 
 ## NFTFixedswap
 
-#### getPoolCount
+### getPoolCount
 
 desc: get count of all pool in Fixedswap contract
 
@@ -1008,7 +1008,7 @@ respnse
 ```
 - - - 
 
-#### getPool
+### getPool
 
 desc: get pool base info
 
@@ -1040,7 +1040,7 @@ respnse
 ```
 - - - 
 
-#### getPoolStatus
+### getPoolStatus
 
 desc: get pool trade info
 
@@ -1072,7 +1072,7 @@ respnse
 ```
 - - - 
 
-#### isCreator
+### isCreator
 
 desc: get pool trade info
 
@@ -1112,7 +1112,7 @@ respnse
 ```
 - - -
 
-#### checkToken0
+### checkToken0
 
 desc: check if the token can be sold
 
@@ -1150,7 +1150,7 @@ respnse
 ```
 - - -
 
-#### getConfig
+### getConfig
 
 desc: get Fixedswap contract config
 
@@ -1197,7 +1197,7 @@ respnse
 
 ipfs https://ipfsr.dreamix.com/ipfs/{hash}
 
-#### update-data
+### update-data
 
 desc: upload source data to ipfs
 
@@ -1319,7 +1319,7 @@ response
 ```
 - - -
 
-#### upload-files
+### upload-files
 
 desc: upload multi files to ipfs, includes image text files
 
@@ -1364,7 +1364,7 @@ response
 
 土地相关接口
 
-#### calculateTokenId
+### calculateTokenId
 desc: calculate token ID according to coordinate
 
 uri: {apiAddress}/Land/calculateTokenId 
@@ -1407,7 +1407,7 @@ respnse
 ```
 - - - 
 
-#### tokenCoordinate
+### tokenCoordinate
 desc: get coordinate of token ID
 
 uri: {apiAddress}/Land/tokenCoordinate 
@@ -1453,7 +1453,7 @@ respnse
 ```
 - - - 
 
-#### exist
+### exist
 desc: check existence for token ID
 
 uri: {apiAddress}/Land/exist 
@@ -1499,7 +1499,7 @@ respnse
 ## LandSell
 官方土地售卖相关接口
 
-#### bidInfo
+### bidInfo
 desc: get bid info in land selling
 
 uri: {apiAddress}/LandSell/bidInfo 
@@ -1546,7 +1546,7 @@ respnse
 ```
 - - - 
 
-#### bidInfoByTokenId
+### bidInfoByTokenId
 desc: get bid info in land selling
 
 uri: {apiAddress}/LandSell/bidInfoByTokenId 
@@ -1587,7 +1587,7 @@ respnse
 ```
 - - - 
 
-#### getSignatureForBid
+### getSignatureForBid
 desc: get bid signature
 
 uri: {apiAddress}/LandSell/getSignatureForBid 
@@ -1640,7 +1640,7 @@ respnse
 ```
 - - - 
 
-#### getSignatureForBuy
+### getSignatureForBuy
 desc: get fixedswap signature
 
 uri: {apiAddress}/LandSell/getSignatureForBuy 
@@ -1692,7 +1692,7 @@ respnse
 ## Info
 链上交互信息接口
 
-#### interact/uniswap
+### interact/uniswap
 desc: get interaction count with uniswap
 
 uri: {apiAddress}/info/interact/uniswap
@@ -1731,7 +1731,7 @@ respnse
 ```
 - - - 
 
-#### interact/opensea
+### interact/opensea
 desc: get interaction count with opensea
 
 uri: {apiAddress}/info/interact/opensea
@@ -1770,7 +1770,7 @@ respnse
 ```
 - - - 
 
-#### interact/gitcoin
+### interact/gitcoin
 desc: get interaction count with gitcoin
 
 uri: {apiAddress}/info/interact/gitcoin
@@ -1809,7 +1809,7 @@ respnse
 ```
 - - - 
 
-#### interact/ens
+### interact/ens
 desc: get interaction count with ens
 
 uri: {apiAddress}/info/interact/ens
@@ -1851,7 +1851,7 @@ respnse
 
 ## Admin
 
-#### login
+### login
 
 url: {apiAddress}/admin/login
 
@@ -1890,7 +1890,7 @@ response
 ```
 - - -
 
-#### logout
+### logout
 
 url: {apiAddress}/admin/logout
 
@@ -1923,7 +1923,7 @@ response
 - - -
 
 
-#### /resource/typeList
+### /resource/typeList
 
 url: {apiAddress}/admin/resource/typeList
 
@@ -1942,7 +1942,7 @@ response
 ```
 - - -
 
-#### /resource/get
+### /resource/get
 
 url: {apiAddress}/admin/resource/get
 
@@ -1978,7 +1978,7 @@ response
 - - -
 
 
-#### /resource/query
+### /resource/query
 
 url: {apiAddress}/admin/resource/query
 
@@ -2031,7 +2031,7 @@ response
 ```
 - - -
 
-#### /resource/add
+### /resource/add
 
 url: {apiAddress}/admin/resource/add
 
@@ -2080,7 +2080,7 @@ response
 - - -
 
 
-#### /resource/modify
+### /resource/modify
 
 url: {apiAddress}/admin/resource/modify
 
@@ -2130,7 +2130,7 @@ response
 ```
 - - -
 
-#### /resource/delselected
+### /resource/delselected
 
 url: {apiAddress}/admin/resource/delselected
 
@@ -2159,7 +2159,7 @@ response
 - - -
 
 
-#### /resource/restoreselected
+### /resource/restoreselected
 
 url: {apiAddress}/admin/resource/restoreselected
 
@@ -2208,7 +2208,7 @@ CREATE TABLE `resource` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ```
 
-#### /resource/typeList
+### /resource/typeList
 
 url: {apiAddress}/resource/typeList
 
@@ -2227,7 +2227,7 @@ response
 ```
 - - -
 
-#### /resource/get
+### /resource/get
 
 url: {apiAddress}/resource/get
 
@@ -2263,7 +2263,7 @@ response
 - - -
 
 
-#### /resource/query
+### /resource/query
 
 url: {apiAddress}/resource/query
 
