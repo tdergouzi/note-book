@@ -1,8 +1,4 @@
-# MetaVerse JS-SDK
-
-```
-github.com: 
-```
+# Dreamix JS-SDK
 
 ## 编译
 ```

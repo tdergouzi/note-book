@@ -1,7 +1,7 @@
-## Dreamix Server Contract ABI
+## Dreamix Contract Token ABI
 
 ```
-github.com: https://github.com/burgerswap-org/meta-verse-nft-protocol
+github.com: https://github.com/Dreamix-Labs/Dreamix_Contract_Token
 ```
 
 ### ERC20Token
