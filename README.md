@@ -1,2 +1,1 @@
-# project-doc
-Project document collection.
+# note-book
