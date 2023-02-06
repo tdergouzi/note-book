@@ -228,7 +228,7 @@ QAQ...
 
 ### 2023-02
 
-3
+03
 
 ```json
 {
@@ -248,6 +248,26 @@ QAQ...
   "linearization": {p: "美 /ˌlɪnɪərɪ'zeʃən/", n: "线性化"},
   "acyclic": {p: "美 /e'saɪklɪk/", adj: "非循环的，非周期的"},
   "reverse": {v: "翻转，推翻", adj: "相反的，反向的", n: "相反"}
+}
+```
+
+
+
+06
+
+```json
+{
+  "credentials": {p: "美 /krə'dɛnʃlz/", n: "资格证书，证书，资格"},
+  "compatible": {p: "美 /kəm'pætəbl/", adj: "可以并存的，相容的，协调的"},
+  "trivial": {p: "美 /'trɪvɪəl/", adj: "不重要的，琐碎的"},
+  "adage": {p: "美 /'ædɪdʒ/", n: "谚语，格言"},
+  "opaque": {p: "美 /o'pek/", adj: "不透明的，难理解的"},
+  "schema": {p: "美 /'skimə/", n: "架构，结构，图解，纲要"},
+  "criteria": {p: "美 /kraɪˈtɪrɪə/", n: "标准，条件"},
+  "deterministic": {p: "美 /dɪ,tɝmɪn'ɪstɪk/", adj: "确定性"},
+  "illustrative": {p: "美 /ɪ'lʌstrətɪv/", adj: "用作说明的，解说性的"},
+  "collision": {p: "美 /kə'lɪʒən/", n: "碰撞，冲突"},
+  "arbitrary": {p: "美 /'ɑrbətrɛri/", adj: "随意的，主观的"}
 }
 ```
 
