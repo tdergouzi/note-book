@@ -77,9 +77,9 @@ QAQ...
 
 ```json
 {
-  "polymorphism": {p: "美 /ˌpɑlɪ'mɔrfɪzm/", n: "多样性，多态"},
-  "constraint": {p: "美 /kən'streint/", n: "约束，限制条件"},
-  "ambiguity": {p: "美 /ˌæmbɪ'ɡjuəti/", n: "歧义，模凌两可"}
+  "polymorphism": {p: "/ˌpɑlɪ'mɔrfɪzm/", n: "多样性，多态"},
+  "constraint": {p: "/kən'streint/", n: "约束，限制条件"},
+  "ambiguity": {p: "/ˌæmbɪ'ɡjuəti/", n: "歧义，模凌两可"}
 }
 ```
 
@@ -268,6 +268,48 @@ QAQ...
   "illustrative": {p: "美 /ɪ'lʌstrətɪv/", adj: "用作说明的，解说性的"},
   "collision": {p: "美 /kə'lɪʒən/", n: "碰撞，冲突"},
   "arbitrary": {p: "美 /'ɑrbətrɛri/", adj: "随意的，主观的"}
+}
+```
+
+
+
+07
+
+```json
+{
+  wrap: {
+    tv: "to cover especially by winding or folding",
+    itv: "to wind, coil, or twine so as t encircle or cover something",
+    n: "material for wrapping"
+  },
+  corpus: {
+    n: [
+      "the body of a human or animal especially when dead",
+      "the main part or body of a bodily structure or organ",
+      "all the writings or works of a particular kind or on a particular subject"
+    ]
+  },
+  "rally": {},
+  "traction": {},
+  "abuse": {}，
+  "malicious": {},
+	"phishing": {},
+	"incentive": {},
+	"aligned": {},
+	"fraud": {},
+	"sumulation": {},
+	"thread": {},
+	"evaluation": {}
+}
+```
+
+
+
+08
+
+```json
+{
+  "transitive": {}
 }
 ```
 
