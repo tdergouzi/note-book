@@ -289,13 +289,13 @@
   "traction": {},
   "abuse": {},
   "malicious": {},
-	"phishing": {},
-	"incentive": {},
-	"aligned": {},
-	"fraud": {},
-	"sumulation": {},
-	"thread": {},
-	"evaluation": {}
+  "phishing": {},
+  "incentive": {},
+  "aligned": {},
+  "fraud": {},
+  "sumulation": {},
+  "thread": {},
+  "evaluation": {}
 }
 ```
 
