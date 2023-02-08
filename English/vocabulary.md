@@ -305,7 +305,8 @@
 
 ```json
 {
-  "transitive": {}
+  "transitive": {},
+  "identicial": {}
 }
 ```
 
