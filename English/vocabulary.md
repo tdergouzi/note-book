@@ -285,9 +285,31 @@
       "all the writings or works of a particular kind or on a particular subject"
     ]
   },
-  "rally": {},
-  "traction": {},
-  "abuse": {},
+  "rally": {
+    "tv": [
+      "to muster for a common purpose",
+      "to arouse for action"
+    ],
+    "itv": "to come together again to renew an effor",
+    "n": [
+      "a mustering of scattered forces to renew an effort",
+      "a mass meeting intended to arouse group enthusiasm"
+    ]
+  },
+  "traction": {
+    "n": [
+      "the process of treating a broken bone with special medical equipment that pulls it in traction",
+      "the force that prevents something such as a wheel sliding on a surface",
+      "if a new idea or thing gains traction, it becomes accepted by or popular with more and more people"
+    ]
+  },
+  "abuse": {
+    "n": [
+      "cruel or violent treatment of someone",
+      "the use of something in a way that it should not be used",
+      "rude or offensive things that someone says when they are angry"
+    ]
+  },
   "malicious": {},
   "phishing": {},
   "incentive": {},
@@ -306,7 +328,8 @@
 ```json
 {
   "transitive": {},
-  "identicial": {}
+  "identicial": {},
+  "muster": {}
 }
 ```
 
