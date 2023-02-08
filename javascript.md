@@ -6,6 +6,8 @@
 
 
 
+### JavaScript 定义
+
 JavaScript 是轻量脚本语言（script language）
 
 JavaScript 也是一种嵌入式（embeded）语言
@@ -18,109 +20,57 @@ JavaScript 程序可采用事件驱动（event-driven）和非阻塞式设计（
 
 
 
+### JavaScritp 的出现
+
+1995年，Netscape 公司雇用了程序员 Brendan Eich 开发网页脚本语言。
 
 
 
+### JavaScript & Java
+
+Java 与 JavaScript 关系，后者的基本语法和对象体系，模仿前者设计。两者之间具有相似性，所以在命名方面，经过 Java 公司 Sun 的同意，由最开始的 LiveScript 改名为 JavaScript。
 
 
 
+### JavaScript & ECMAScript
+
+ECMAScript 与 JavaScript 的关系，前后是后者的规格，后者是前者的实现。
 
 
 
+### JavaScript 版号
+
+2011年6月，ECMAScript 5.1 版发布，并且成为国际标准（ISO/IEC 16262:2011）
+
+2015年6月，ECMAScript 6 正式发布，并且更名为 ECMAScript 2015。因为 TC93 委员会计划每年发布一个新的版本，后续版本名称以此类推。
 
 
 
+### JavaScript 基本语法
+
+#### 变量
+
+变量名区分大小写，`A`和`a`是两个不同的变量。
 
 
 
+#### 变量提升
 
+JavaScript 引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行运行。实际运行代码过程中，所有的变量的声明语句，都会被提升到代码的头部，称为变量提升（hoisting）。
 
+```javascript
+console.log(a);
+var a = 1;
 
+// 实际运行代码
 
+var a;
+console.log(a);
+a = 1；
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## NodeJS 
-
-### npm
-
-1. 安装运行依赖项
-
-```sh
-npm install <package-name>
+// 输出结果
+undefined
 ```
-
-2. 安装开发依赖项
-
-```sh
-npm install <package-name> --save-dev
-```
-
-开发依赖是仅用于开发的程序包，在生产环境不需要。例如测试的软件包 webpack Babel 等。
-
-生产环境中，安装依赖的时候，`npm install` 默认开始开发部署，所以需要 `npm install --production` 声明，以避免安装开发依赖。
-
-3. 安装对等依赖项
-
-```sh
-npm install <package-name> --save-peer
-```
-
-安装依赖时，依赖库与另一个依赖库的依赖库产生冲突，为避免冲突和重复安装，可以用对等依赖的方式。结果如下：
-
-```sh
-.
-├──package.json
-├──src
-│  └──index.js
-└──node_modules
-   └──peer-dependencies-plugin-core
-   └──peer-dependencies-plugin
-      └──node_modules
-         └──peer-dependencies-plugin-core
-```
-
-将 `peer-dependencies-plugin-core` 设置为 `peerDependencies`，再 `npm install peer-dependencies-plugin`
-
-```sh
-{
-  ...
-  "peerDependencies": {
-    "peer-dependencies-plugin-core": "^1.0.0"
-  }
-  ...
-}
-```
-
-```sh
-.
-├──package.json
-├──src
-│  └──index.js
-└──node_modules
-   └──peer-dependencies-plugin-core
-   └──peer-dependencies-plugin
-```
-
-
 
 
 
