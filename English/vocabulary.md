@@ -310,14 +310,40 @@
       "rude or offensive things that someone says when they are angry"
     ]
   },
-  "malicious": {},
-  "phishing": {},
-  "incentive": {},
-  "aligned": {},
-  "fraud": {},
-  "sumulation": {},
-  "thread": {},
-  "evaluation": {}
+  "malicious": {
+    "adj": "very unkind and cruel, and deliberately behaving in a way that is likely to upset or hurt someone"
+  },
+  "phishing": {
+    "n": "the criminal activity of sending emails or having a wesit that is intended to trick someone into giving away information such as their bank account number or their computer password. This information is then used to get money or goods"
+  },
+  "incentive": {
+    "n": "something that encourages you to work harder, start a new activity etc"
+  },
+  "aligned": {
+    "tv": [
+      "to publicly support a political group, country, or a person that you agree with",
+      "to arrange things so that they form a line or are parallel to each other, or to be in a osition that forms a line etc",
+      "to organize or change something so that it has the right relationship to something else"
+    ]
+  },
+  "fraud": {
+    "n": [
+      "the crime of deceiving people in order to gain something such as money or goods",
+      "someone or something that is not what they claim to be"
+    ]
+  },
+  "simulation": {
+    "n": "the activity of producing conditions which are similar to real one, especially in order to test something, or the conditions that are produced"
+  },
+  "thread": {
+    "n": [
+      "a long thin string of cotton, silk etc used to sew or weave cloth",
+      "an idea, feelling, or feature that connects the different parts of an explanation, story etc"
+    ]
+  },
+  "evaluation": {
+    "n": "a judgement about how good, useful, or successful something is"
+  }
 }
 ```
 
@@ -327,9 +353,37 @@
 
 ```json
 {
-  "transitive": {},
-  "identicial": {},
-  "muster": {}
+  "transitive": {
+    "adj": "a transitive verb must have an object"
+  },
+  "identical": {
+    "adj": "exactly the same, or very similar"
+  },
+  "muster": {
+    "tv": [
+      "to get enough courage, confidence, support etc to do something, especially with difficulty",
+      "if soldier muster, or if someone musters them, they come together in a group"
+    ],
+    "eg": [
+      "Finally I mustered up the courage to ask her out.",
+      "In April 1185, he began to muster an army."
+    ]
+  }
+}
+```
+
+
+
+09
+
+```json
+{
+  "svelte": {
+    "adj": "thin and graceful"
+  },
+  "singularity": {
+    "n": "technical an extremely small point in space that contains an extremely large amount of material and which does not obey th eusual laws of nature, for example a black hole"
+  }
 }
 ```
 
