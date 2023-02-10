@@ -387,3 +387,36 @@
 }
 ```
 
+
+
+10
+
+```json
+{
+  "quest": {
+    "n": "a long search for something that is difficult to find",
+    "eg": "the quest for human happiness"
+  }
+  "speculators": {},
+	"entry": {},
+	"distribute": {
+    "tv": [
+      "to share things amoung a group of people, especially in a planned way",
+      "to supply goods to shops and companies so that they can sell them",
+      "to spread something over a large area"
+    ]
+  },
+ "render": {
+   "tv": [
+     "to cause someone or something to be in a particular condition",
+     "formal to give something to someone or do something, because it is your dury or because someone expects your to",
+     "to express or present something in a particular way"
+   ],
+   "eg": [
+     "He was rendered almost speechless by the news.",
+     "an obligation to render assistance to those in need"
+   ]
+ }
+}
+```
+
