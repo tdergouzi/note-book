@@ -420,3 +420,29 @@
 }
 ```
 
+
+
+13
+
+```json
+{
+  "slaw": {},
+  "snipped": {}
+}
+```
+
+
+
+14
+
+```json
+{
+  "eligibe": {
+    "adj": "someone who is eligible for something is able or allowed to do it"
+  },
+  "infrastructure": {
+    "n": "the basic systems and structures that a country or organization needs in order to work properly, for example roads, railways, banks"    
+  }
+}
+```
+

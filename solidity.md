@@ -1,96 +1,10 @@
-### Error handing
-
-#### if throw
-
-```solidity
-contract HasAnOwner {
-	address owner;
-	function useSuperPowner() external {
-		if (msg.sender != owner) { throw; } 
-		// ...
-	}
-}
-```
-
-The function will throw returning an `invalid opcode` error when the caller address is not `owner`, ==undoing all state changes, and using up remaining gas.==
-
-The throw keyword is now being deprecated.
+# Solidity
 
 
 
-#### assert, require, revert
-
-old one:
-
-```solidity
-if (msg.sender != owner) { throw; }
-```
-
-new one:
-
-```solidity
-if (msg.sender != owner) { revert(); }
-assert(msg.sender == owner);
-require(msg.sender == owner);
-```
 
 
-
-`assert(false)` compiles to `0xfe` , which is an invalid opcode, using up all remains gas, and reverting all changes.
-
-`require(false)` compiles to `0xfd` which is the `REVERT`  opcode, meaning it will refund the remaining gas. The opcode can also return a value.
-
-
-
-`assert()` creates an ==error of type `Panic(uint256)`==, Assert should only be used to test for internal errors, and to check invariants. Properly functioning code should never create a Panic.
-
-`require()` creates an error without any data or ==an error of type `Error(string)`.==
-
-
-
-#### REVERT opcode
-
- `REVERT` will still undo all state changes.
-
-- It will allow you to return a value.	
-- It will refund any remaining gas to the caller.
-
-```solidity
-revert CustomError(agr1, arg2);
-revert();
-revert("description");
-```
-
-The error data will be passed back to the caller and can be caught there.
-
-Using a custom error instance will usually be much cheaper than a string description , because you can use the name of the error to describe it , which is encoded in only four bytes.
-
-```solidity
-pragma solidity ^0.8.4;
-
-contract VendingMachine {
-	address owner;
-	error Unauthorized();
-	function withdraw() public {
-		if (msg.sender != owner) revert Unauthorized();
-	}
-}
-```
-
-
-
-The Provider string is abi-encoded as if it were call to a function `Error(string)`. For example `revert("not enough Ether provided.");` returns the following hexadecimal as error return data:
-
-```sh
-0x08c379a0                                                         // Function selector for Error(string)
-0x0000000000000000000000000000000000000000000000000000000000000020 // Data offset
-0x000000000000000000000000000000000000000000000000000000000000001a // String length
-0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000 // String data
-```
-
-
-
-### Assembly
+## Assembly
 
 144 opcode
 
@@ -107,9 +21,9 @@ a b add // Reverse Polish Notation
 
 
 
-#### Why I use the Assembly In solidity
+### Why I use the Assembly In solidity
 
-##### Gas Saving
+#### Gas Saving
 
 The main advantage is the gas saving, for example: 
 
@@ -139,7 +53,7 @@ execution cost 340 gas.
 
 
 
-##### Enhancement
+#### Enhancement
 
 - Inline assembly allows you to read entire words(256 bits) from data typres like `string` and `bytes` in a single operation.
 - Some operations aren't exposed in Solidity. For instance, the `sha3` opcode takes a bytes range in memory to hash, while the Solidity function of the same name takes a string. Thus, hashing part of a string would require costly string copying operations. With inline assembly, you can pass in a string and hash just the bit you care about.
@@ -149,16 +63,16 @@ execution cost 340 gas.
 
 
 
-#### Assembly Type
+### Assembly Type
 
 - Inline Assembly: That you can use in Solidity.
 - Standalone Assembly: Using without Solidity.
 
 
 
-#### Assembly Operation
+### Assembly Operation
 
-##### declare variables
+declare variables
 
 ```solidity
 assembly {
@@ -171,7 +85,7 @@ assembly {
 
 
 
-##### for loop
+for loop
 
 ```solidity
     function nativeLoop(uint n, uint value) external pure returns (uint) {
@@ -201,7 +115,7 @@ assembly {
 
 
 
-##### while
+while
 
 ```solidity
 assembly {
@@ -216,7 +130,7 @@ assembly {
 
 
 
-##### if
+if
 
 ```solidity
 assembly {
@@ -228,7 +142,7 @@ assembly {
 
 
 
-##### switch
+switch
 
 ```solidity
 assembly {
@@ -266,7 +180,7 @@ assembly {
 
 
 
-##### function
+function
 
 Allocate memory of specified length and return memory pointer pos.
 
@@ -286,13 +200,13 @@ You can use `leave` keyword in `function` of assembly to stop and return.
 
 
 
-#### Opcodes
+### Opcodes
 
 [Solidity Opcodes]: https://docs.soliditylang.org/en/v0.6.2/yul.html?highlight=opcodes#evm-dialect
 
 
 
-##### features
+#### features
 
 - Opcodes marked with `-` do not return a result and all others return exactly one value.
 - Opcodes marked with `F` `H` `B` `C` or `I` are present since Frontier, HomeStead, Byzantium, Constantinople or Istanbul.
@@ -301,7 +215,7 @@ You can use `leave` keyword in `function` of assembly to stop and return.
 
 
 
-##### additional functions
+#### additional functions
 
 - `datasize(x)`
 - `dataoffset(x)`
@@ -311,9 +225,9 @@ You can use `leave` keyword in `function` of assembly to stop and return.
 
 
 
-#### Advanced Assembly
+### Advanced Assembly
 
-##### tuple
+#### tuple
 
 ```solidity
 assembly {
@@ -324,15 +238,7 @@ assembly {
 
 
 
-### Virtual Stack Machines
-
-##### Fundamentals
-
-
-
-### Contract Safe
-
-#### delegatecall
+## Delegatecall
 
 When call delegatecall function to udpate a storage variable, the modification of the variable is not based on the name of the variable, but on the storage location of the variable.
 
@@ -387,7 +293,105 @@ contract Attack {
 
 
 
-### Gas Save
+## Libraries
+
+[Deep Dive Into Solidity Libraries](https://coinsbench.com/deep-dive-into-solidity-libraries-e9bd7f9061fb)
+
+
+
+## Error
+
+### Error Handling
+
+#### if throw
+
+```solidity
+contract HasAnOwner {
+	address owner;
+	function useSuperPowner() external {
+		if (msg.sender != owner) { throw; } 
+		// ...
+	}
+}
+```
+
+The function will throw returning an `invalid opcode` error when the caller address is not `owner`, ==undoing all state changes, and using up remaining gas.==
+
+The throw keyword is now being deprecated.
+
+
+
+#### assert, require, revert
+
+old one:
+
+```solidity
+if (msg.sender != owner) { throw; }
+```
+
+new one:
+
+```solidity
+if (msg.sender != owner) { revert(); }
+assert(msg.sender == owner);
+require(msg.sender == owner);
+```
+
+`assert(false)` compiles to `0xfe` , which is an invalid opcode, using up all remains gas, and reverting all changes.
+
+`require(false)` compiles to `0xfd` which is the `REVERT`  opcode, meaning it will refund the remaining gas. The opcode can also return a value.
+
+`assert()` creates an ==error of type `Panic(uint256)`==, Assert should only be used to test for internal errors, and to check invariants. Properly functioning code should never create a Panic.
+
+`require()` creates an error without any data or ==an error of type `Error(string)`.==
+
+
+
+#### REVERT opcode
+
+ `REVERT` will still undo all state changes.
+
+- It will allow you to return a value.	
+- It will refund any remaining gas to the caller.
+
+```solidity
+revert CustomError(agr1, arg2);
+revert();
+revert("description");
+```
+
+The error data will be passed back to the caller and can be caught there.
+
+Using a custom error instance will usually be much cheaper than a string description , because you can use the name of the error to describe it , which is encoded in only four bytes.
+
+```solidity
+pragma solidity ^0.8.4;
+
+contract VendingMachine {
+	address owner;
+	error Unauthorized();
+	function withdraw() public {
+		if (msg.sender != owner) revert Unauthorized();
+	}
+}
+```
+
+
+
+The Provider string is abi-encoded as if it were call to a function `Error(string)`. For example `revert("not enough Ether provided.");` returns the following hexadecimal as error return data:
+
+```sh
+0x08c379a0                                                         // Function selector for Error(string)
+0x0000000000000000000000000000000000000000000000000000000000000020 // Data offset
+0x000000000000000000000000000000000000000000000000000000000000001a // String length
+0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000 // String data
+```
+
+
+
+
+
+## Gas
 
 #### loop index type
 
@@ -427,4 +431,8 @@ Run test to add 100 nums into the array, result:
 Using `uint` is more gas saving.
 
 
+
+## Test
+
+[race-14-of-the-secureum-bootcamp-epoch-infinity](https://ventral.digital/posts/2023/1/30/race-14-of-the-secureum-bootcamp-epoch-infinity)
 
