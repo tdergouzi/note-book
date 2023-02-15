@@ -446,3 +446,18 @@
 }
 ```
 
+
+
+15
+
+```json
+{
+  "period": {
+    "n": [
+      "a particular length of time with a beginning and an end",
+      "a particular time in someone's life or in history"
+    ]
+  }
+}
+```
+
