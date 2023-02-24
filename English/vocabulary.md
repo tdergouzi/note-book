@@ -461,3 +461,49 @@
 }
 ```
 
+
+
+17
+
+```json
+{
+  "shards": {
+    "n": "a shard piece of glass or metal"
+  },
+  "obtain": {
+    "tv": "to get something that you want, especially through you effort, skill, or work",
+    "itv": "if a situation, system, or rule obtains, it continues to exist",
+    "eg": [
+      "Future information can be obtained from head office",
+      "These conditions no longer obtain"
+    ]
+  },
+ "tier": {
+   "n": [
+     "one of serveral levels or layers that rise up one above the other",
+     "oen of several levels in an organization or system"
+   ]
+ }
+}
+```
+
+
+
+18
+
+```json
+{
+  "ample": {
+   	"adj": [
+      "more than enough",
+      "literary large in a way that is attractive or pleasant"
+    ]
+  },
+  "intellectual": {
+    "adj": [
+      "relating to the ability to understand things and think intelligently"
+    ]
+  }
+}
+```
+
