@@ -507,3 +507,77 @@
 }
 ```
 
+
+
+28
+
+```json
+{
+  "consensus": {
+    "n": "an opinion that everyone in a group agrees with or accepts"
+  },
+  "narrow": {
+    "adj": [
+      "measuring only a small distance from one side to the other, especially in relation to the length",
+      "a narrow attitude or way of looking at a situation is to limited and does not consider enough possibilities"
+    ]
+  },
+  "synchronous": {
+    "adj": "if two or more things are synchronous, they happen at the same time or work at the same speed"
+  },
+  "resilient": {
+    "adj": "able to become strong, happy, or successful again after a difficult situation or event"
+  },
+  "stealth": {
+    "n": "when you do something very quietly, slowly, or secretly, so that no one notices you"
+  },
+  "compatible": {
+    "adj": "if two pieces of computer equipment of software are compatible, they can be used together, especially when they are made by different companies"
+  },
+  "perpetual": {
+    "adj": [
+      "continuing all the time without changing or stopping",
+      "repeated many times in a way that annoys you"
+    ]
+  },
+  "elapse": {
+    "v": "formal if a particular period of time elapses, it passes"
+  },
+  "immerse": {
+    "v": "to put someone or something deep into a liquid so that they are completely covered immerse somebody/something in something"
+  },
+  "granularity": {
+    "n": "the amount of detail that is included in something such as a system"
+  }
+}
+```
+
+
+
+### 2023-03
+
+01
+
+```json
+{
+  "phase": {
+    "n": "one of the stages of a process of development or change"
+  }
+}
+```
+
+
+
+02
+
+```json
+{
+  "summarize": {
+    "v": "to make a short statement giving only the main information and not the details of a plan, event, report etc"
+  },
+  "summary": {
+    "n": "a shrot statement that gives the main information about something, without giving all the details"
+  }
+}
+```
+
