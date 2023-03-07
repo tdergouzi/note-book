@@ -581,3 +581,22 @@
 }
 ```
 
+
+
+04
+
+```json
+{
+  "subsequent": {
+    "adj": "happing or coming after something else"
+  },
+  "circumstance": {
+		"n": "the conditions that affect a situation, action, event etc" 
+  },
+  "filing": {
+    "un": "the work of arranging documents in the correct files",
+    "n": "a document, report etc that is officially recorded"
+  }
+}
+```
+
