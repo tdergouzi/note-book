@@ -600,3 +600,34 @@
 }
 ```
 
+
+
+14
+
+```json
+{
+  "blob": {
+    "n": [
+      "a very small round mass of a liquid or sticky substance",
+      "something that cannot be clearly seen, especially because it is far away"
+    ]
+  },
+  "threshold": {
+    "n": [
+      "the entrance to a room or building, or the area of floor or ground at th entrance",
+      "the level at which something starts to happen or have an effect"
+    ],
+    "eg": [
+      "She opened the door and stepped across the threshold",
+      "Eighty percent of the vote was the threshold for approval of the plan"
+    ]
+  },
+  "enact": {
+    "v": [
+      "formal to act in a play, story etc",
+      "law to make a proposal into a law"
+    ]
+  }
+}
+```
+
