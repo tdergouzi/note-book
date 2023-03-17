@@ -605,29 +605,69 @@
 14
 
 ```json
+# blob
 {
-  "blob": {
-    "n": [
-      "a very small round mass of a liquid or sticky substance",
-      "something that cannot be clearly seen, especially because it is far away"
-    ]
-  },
-  "threshold": {
-    "n": [
-      "the entrance to a room or building, or the area of floor or ground at th entrance",
-      "the level at which something starts to happen or have an effect"
-    ],
-    "eg": [
-      "She opened the door and stepped across the threshold",
-      "Eighty percent of the vote was the threshold for approval of the plan"
-    ]
-  },
-  "enact": {
-    "v": [
-      "formal to act in a play, story etc",
-      "law to make a proposal into a law"
-    ]
-  }
+  "n1": "a very small round mass of a liquid or sticky substance",
+  "n2": "something that cannot be clearly seen, especially because it is far away"
+}
+```
+
+```json
+# threshold
+{
+  "n1": "the entrance to a room or building, or the area of floor or ground at th entrance",
+  "eg1": "She opened the door and stepped across the threshold",
+  "n2": "the level at which something starts to happen or have an effect",
+  "eg2": "Eighty percent of the vote was the threshold for approval of the plan"
+}
+```
+
+```json
+# enact
+{
+  "v1": "formal to act in a play, story etc",
+ 	"v2": "law to make a proposal into a law"
+}
+```
+
+
+
+17 
+
+```json
+# arguably
+{
+  "p": "/ˈɑːɡjuəbli/",
+  "adv": "used when giving your opinion to say that there are good reasons why something might be true",
+  "eg": "Arguably one of the main reasons for the success of EIP-20 tokens lies in the interplay between `approve` and `transferFrom`"
+}
+```
+
+```json
+# scarcely
+{
+  "p": "/ˈskeəsli $ ˈsker-/",
+  "adv1": "almost not or almost none at all",
+  "eg1": "The city had scarcely changed in 20 years",
+  "adv2": "only a moment ago",
+  "eg2": "He had scarcely sat down when there was a knock at the door"
+}
+```
+
+```json
+# ubiquitous
+{
+  "p": "/juːˈbɪkwɪtəs/",
+  "adj": "seeming to be everywhere"
+  "eg": "While EIP-20 tokens have become ubiquitous in the Ethereum ecosystem"
+}
+```
+
+```json
+# draft
+{
+  "p": "/drɑːft $ dræft/",
+  "n": "a piece of writing or a plan that is not yet in its finished form"
 }
 ```
 
