@@ -671,3 +671,61 @@
 }
 ```
 
+
+
+20
+
+```json
+# occur
+{
+	"p": "/əˈkɜː $ əˈkɜːr/ ",
+  "v1": "to happen",
+  "v2": "to happen or exist in a particular place or situation"
+}
+```
+
+```json
+# simultaneous
+{
+  "p": "/ˌsɪməlˈteɪniəs◂ $ ˌsaɪ-/"
+	"adj": "things that are simultaneous happen at exactly the same time"
+}
+```
+
+```json
+# ultimately
+{
+  "p": "",
+  "adv": "finaly, after everything else has been done or considered"
+}
+```
+
+```json
+# scale
+{
+  "p": "/skeɪl/",
+  "n1": "the size or level of something, or amount that something is happening",
+  "n2": "a whole range of different types of people or things, from the lowert level to highest"
+}
+```
+
+
+
+21
+
+```json
+# insight
+{
+  "p": "/ˈɪnsaɪt/",
+  "cn": "a sudden clear understanding of something or part of something, especially a complicated situation or idea",
+  "ucn": "the ability to understand and realize what people or situations are really like"
+}
+```
+
+```json
+# subscription
+{
+  "n": "an amount of money you pay, usually once a year,"
+}
+```
+
