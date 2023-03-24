@@ -729,3 +729,19 @@
 }
 ```
 
+
+
+23
+
+```json
+# prompt
+{
+  "p": "/prɒmpt $ prɑːmpt/",
+  "v1": "to make someone decide to do something",
+  "v2": "to make people say or do something as a reaction",
+  "v3": "to help a speaker who pauses, by suggesting how to continue"
+}
+```
+
+
+

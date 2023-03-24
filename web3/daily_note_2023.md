@@ -68,3 +68,24 @@ questions:
 
 
 
+21
+
+```
+title: 数据复盘USDC危机后的稳定币市场：稳定币购买力跌至短期低点
+
+link: https://www.panewslab.com/zh/articledetails/0kbt7c9n.html
+
+author: PAData
+
+keywords: StableCoin, USDT, USDC
+
+summary: 
+ - 稳定币分属四大类
+ 	- 法币稳定币 fiat-backed
+ 	- 基于加密资产的稳定币 crypto-backed
+ 	- 算法稳定币 algorithmic
+ 	- 加密资产抵押和算法的混合稳定币 hybrid
+ - 稳定币供应指数（Stablecoin Supply Ratio，SSR），用于衡量市场潜在购买力，指BTC市值相对于所有稳定币总市值的比率，SSR越低意味着稳定币供应越充分，潜在购买力越强，价格上涨可能性大
+ - USDC脱锚后，购买量增加，用户仍相信USDC能重新锚定
+```
+
