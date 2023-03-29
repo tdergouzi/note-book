@@ -745,3 +745,21 @@
 
 
 
+28
+
+```json
+# thrill
+{
+  "p": "/θrɪl/",
+  "n": "a sudden strong feeling of excitement and pleasure"
+}
+```
+
+```json
+# negligible
+{
+  "p": "/ˈneɡlɪdʒəbəl/",
+  "adj": "too slight or unimportant to have any effect"
+}
+```
+

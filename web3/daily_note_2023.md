@@ -89,3 +89,29 @@ summary:
  - USDC脱锚后，购买量增加，用户仍相信USDC能重新锚定
 ```
 
+
+
+29
+
+```
+title: 使用ChatGPT的三条哲学
+
+link: https://mirror.xyz/0x17f3F81860345567482E1D232FB5B6f8bD77f3Bd/OWW9U0vkUGhF6YLJDdyIs_yMPW9Rs8AY3iKj82jVx7E
+
+author: 0xTodd
+
+keywords: ChatGPT, Prompts, AI
+
+summary: 
+ - 文章从个人角度阐述 ChatGPT 的使用心得
+ - ChatGPT 是生成型，不是真理型
+ - 擅长助理类型的工作，语言学习，文章总结等
+ - 通过概率来猜测你想要的答案，没有情感和意志
+ - 着重强调 ChatGPT 作为英语学习工具的优势
+ - 目前用户对于 ChatGPT 的无限想象是现在对于 AI 的监管还不成熟，未来将面临更加严格的监管
+```
+
+
+
+
+
