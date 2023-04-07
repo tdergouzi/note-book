@@ -763,3 +763,115 @@
 }
 ```
 
+
+
+
+
+### 2023-04
+
+03
+
+```json
+# crash course
+{
+  "n": "a course which you can learn a lot about particular subject in a very short period of time"
+}
+```
+
+```json
+# vulnerable
+{
+  "p": "/ˈvʌlnərəbəl/",
+  "adj1": "someone who is vulnerable can be easily harmed or hurt",
+  "adj2": "a place, a thing or ideal that is vulnerable is easy attack or criticize"
+}
+```
+
+ ```json
+ # demonstrate
+ {
+   "p": "/ˈdemənstreɪt/",
+   "v1": "to show or prove something clearly",
+   "v2": "to show or describe how to do something or how something works"
+ }
+ ```
+
+```json
+# essentially
+{
+  "p": "/ɪˈsenʃəli/",
+  "adv": "used when stating basic facts about something"
+}
+```
+
+```json
+# guardians
+{
+  "p": "/ˈɡɑːdiən/",
+  "n1": "formal someone who guards or protects something"
+}
+```
+
+
+
+0406
+
+```json
+# suscipious
+{
+  "p": "/səˈspɪʃəs/",
+  "adj1": "thinking that someone might be guilty of doing something wrong or dishonest",
+  "adj2": "making you think that something bad or illegal is happening"
+}
+```
+
+
+
+0407
+
+```json
+# rigorous
+{
+  "p": "/ˈrɪɡərəs/",
+  "adj1": "careful, thorough, and exact",
+  "adj2": "very severe or strict"
+}
+```
+
+```json
+# conveniently
+{
+  "p": "/kənˈviːniəntli/",
+  "adv1": "in a way that is useful to you because it saves your time or does not spoil your plans or cause you problems",
+  "adv2": "in a place that is close or easily reached"
+}
+```
+
+```json
+# assignment
+{
+  "p": "/əˈsaɪnmənt/",
+  "n": "a piece of work that is given to someone as part of their job"
+}
+```
+
+```json
+# symbolic
+{
+  "p": "/sɪmˈbɒlɪk $ -ˈbɑː-/",
+  "adj1": "a symbolic action is important because of what it represents but may not have any real effect",
+  "adj2": "representing a particular idea or quality"
+}
+```
+
+```json
+# demonstrating
+{
+  "p": "/ˈdemənstreɪt/",
+  "v1": "to show or prove something clearly",
+  "v2": "to show or describe how to do something or how something works"
+}
+```
+
+
+

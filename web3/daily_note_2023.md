@@ -113,5 +113,19 @@ summary:
 
 
 
+30
 
+```
+title: L2 赛道研报
+
+link: https://betalpha.notion.site/Layer-2-5a5fe7bd57134796933501f3994e0b8a
+
+author: xxx
+
+keywords: Layer2
+
+summary:
+ - L2 是为了解决以太坊主网性能和手续费的解决方案
+ - 区块链不可能三角：去中心化，安全性，可扩展性
+```
 
