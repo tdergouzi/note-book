@@ -875,3 +875,54 @@
 
 
 
+0410
+
+```json
+# ratify
+{
+  "p": "/ˈrætɪfaɪ/",
+  "v": "to make a written agreement official by signing it"
+}
+```
+
+```json
+# precision
+{
+  "p": "/prɪˈsɪʒən/",
+  "n": "the quality of being very exact or correct"
+}
+```
+
+```json
+# facilitate
+{
+  "p": "/fəˈsɪlɪteɪt/",
+  "v": "to make it easier for a process or activity to happen"
+}
+```
+
+```json
+# indeterminate
+{
+  "p": "/ˌɪndɪˈtɜːmənət",
+ 	"adj": "impossible to know about definitely or exactly"
+}
+```
+
+```json
+# metric
+{
+  "adj": "using or connected with metric system of weights or measures"
+}
+```
+
+```json
+# faucet
+{
+  "p": "/ˈfɔːsɪt/",
+  "n": "the thing that you turn on and off to control the flow of water from a pipe"
+}
+```
+
+
+

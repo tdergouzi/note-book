@@ -1,8 +1,8 @@
-## Solidity Gas Optimize
+# Solidity Gas Optimize
 
 
 
-### Permit
+## Permit
 
 
 
@@ -151,7 +151,7 @@ gas report:
 
 
 
-### Storage of all tokenIds in ERC721
+## Storage of all tokenIds in ERC721
 
 
 

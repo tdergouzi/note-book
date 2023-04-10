@@ -1,10 +1,10 @@
-## Foundry
+# Foundry
 
-Foundry solidity 智能合约开发框架
+Foundry is a framework for developing solidity.
 
 
 
-### install
+## Install
 
 MacOS or Linus
 
@@ -16,9 +16,7 @@ foundryup
 
 
 
-### solidity dev
-
-#### 项目框架
+## Project structure
 
 ```sh
 .
@@ -36,9 +34,9 @@ foundryup
 
 
 
-### test
+## Test
 
-#### 测试合约模版
+### Contract templates
 
 src/ERC20Token.sol
 
@@ -105,9 +103,9 @@ contract ERC20TokenTest is Test {
 
 
 
-#### 测试标准库（forge-std）
+### Standard libraries
 
-1 设置下一次交易 caller 地址，仅限下一次交易
+设置下一次交易 caller 地址，仅限下一次交易
 
 ```solidity
 function vm.prank(address) external;
@@ -115,7 +113,7 @@ function vm.prank(address) external;
 
 
 
-2 设置下一次交易块高，设置的块高更新为当前块高
+设置下一次交易块高，设置的块高更新为当前块高
 
 ```solidity
 function vm.roll(uint256) external;
@@ -135,7 +133,7 @@ function testCase() public {
 
 
 
-3 合约中（测试合约 + 源合约）输出打印日志，需要配合测试输出级别 `-v` 使用
+合约中（测试合约 + 源合约）输出打印日志，需要配合测试输出级别 `-v` 使用
 
 ```solidity
 import "forge-std/console.sol";
@@ -147,7 +145,7 @@ function testCase() public {
 
 
 
-#### 测试命令
+### Commands
 
 运行全部测试用例，默认运行项目根目录下test文件夹中所有 `testXXX.t.sol`格式的合约测试文件
 
@@ -178,6 +176,3 @@ forge test --match-path testXXX.t.sol -v
 -vvvvv # Print execution and setup traces for all tests
 ```
 
-
-
-## 
