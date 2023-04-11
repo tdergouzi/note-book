@@ -12,17 +12,21 @@
 
 ### F.I.R.S.T
 
-- Fast - The speed of testing should be very fast.
-- Independent - Each testing should be independent and can be run by any 顺序.
-- Repeatable - Testing can be run in any enviroment.
-- Self-validating - There should be a exact result which type is boolean when the test passed.
-- Timely - Write your testing code before production.
+- Fast - The testing speed should be fast enough to run them frequently.
+- Independent - The tests should be independent of each other and able to run in any order.
+- Repeatable - The tests should be repeatable in any enviroment.
+- Self-validating - If the test passes, there should be clear (boolean) output.
+- Timely - Write your testing code before the production.
 
 
 
 ### AAA (Arrange-Act-Assert)
 
+```
 AAA is the stardard mode in software testing. It suggests split testing into three parts: arrange, act and assert. Every part should be responsible to the meaning of the part's name.
+```
+
+AAA (Arrange-Act-Assert) pattern is one of the most common standards in sofrware testing. It suggests dividing tests into corresponding sections: arrange, act, and assert. Each of them is responsible for the part that they are named after.
 
 - Arrange - Setup the testing code.
 - Act - Call the testing functions.
