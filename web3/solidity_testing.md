@@ -22,35 +22,27 @@
 
 ### AAA (Arrange-Act-Assert)
 
-```
-AAA is the stardard mode in software testing. It suggests split testing into three parts: arrange, act and assert. Every part should be responsible to the meaning of the part's name.
-```
-
 AAA (Arrange-Act-Assert) pattern is one of the most common standards in sofrware testing. It suggests dividing tests into corresponding sections: arrange, act, and assert. Each of them is responsible for the part that they are named after.
 
-- Arrange - Setup the testing code.
+- Arrange - Codes required for setting up the test.
 - Act - Call the testing functions.
-- Assert - Check the result.
+- Assert - Check if the expectations have been met.
 
-Every test must use only one assertion.
+Use only one asserttion per test.
 
+### Testing separation
 
+#### Unit testing
 
-### Testing split
+Determine if  the source code unit is suitable for use. This is typically done by testing a single function with different parameters to ensure it returns expected result.
 
-#### Unit test 
+#### Intergration testing
 
-Testing the target function is suitable. This usually is a independent function, We need to test the function by diffierent parameters and make sure the result is right.
+To determine whether an independently developed software unit works properly when connected, for smart contracts, this means verifying the interaction between different components within a single contract or among multiple contracts.
 
-#### Intergration test
+### Test coverage
 
-Testing the connection between the unit software developed independently. There will be many interactions in contracts.
-
-
-
-### Percent of coverage
-
-If you want the application will work successulf, Write the testing code is not enough. You will never know how much codes is testing, the percent of coverage is an useful tool for helping you figure it out.
+Writing a good tests to ensure your application works as expected is not enough. Without measuring anything, it's hard to say how much of your code is  actually being tested. Test coverage is a useful tool for identifying sections of your codebase that are not being tested.
 
 About the exact percent, it depends on you. But it should be high as possible. There will be many unexcept result happen when does not test the codes.
 
