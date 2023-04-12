@@ -30,6 +30,8 @@ AAA (Arrange-Act-Assert) pattern is one of the most common standards in sofrware
 
 Use only one asserttion per test.
 
+
+
 ### Testing separation
 
 #### Unit testing
@@ -39,6 +41,8 @@ Determine if  the source code unit is suitable for use. This is typically done b
 #### Intergration testing
 
 To determine whether an independently developed software unit works properly when connected, for smart contracts, this means verifying the interaction between different components within a single contract or among multiple contracts.
+
+
 
 ### Test coverage
 
@@ -64,7 +68,7 @@ Solidity-coverage
 
 ## Safety & Code analyse
 
-Static analyse is an analyse methods without execute the code.
+Static code analysis is the analysis of software without actually executing program.
 
 Smart contract development tools:
 
@@ -78,14 +82,14 @@ Smart contract development tools:
 
 ## Continuous Intergration (CI)
 
-Although continuous intergration is not a part of code-clean principle, it has been the base thing in developing code. The major adventage of CI is you can find the reason and source when some error happened.
+Although not a part of the principles of clean code, continuous intergration has become a fundamental practices in any type of sofrware development. One major benefit of continuous intergration is that it allows you to quickly detect errors and more easily locate them.
 
-CI followed a series of principles:
+Here are the key principles of continuous intergration:
 
-- Keep a storage repository that contains all source codes, anyone can get current version and history
-- Automatic consutruc process that allows anyone call build the code from source code.
-- Automatic testing, anyone can easy run your test cases any time.
-- Make sure the result is tranparency, and any can get the executeable profile duration contructor process.
+- Maintain a respository where all code is stored and anyone can access current and past versions.
+- Automate the build process so anyone can build directly from the source code.
+- Automate your tests so anyone can run the full suite of tests at any time.
+- Ensure that anyone can view the results and obtain the latest executable from the build process.
 
 
 
