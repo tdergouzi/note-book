@@ -273,77 +273,108 @@
 
 ```json
 {
-  "wrap": {
-    "tv": "to cover especially by winding or folding",
-    "itv": "to wind, coil, or twine so as t encircle or cover something",
-    "n": "material for wrapping"
-  },
-  "corpus": {
-    "n": [
-      "the body of a human or animal especially when dead",
-      "the main part or body of a bodily structure or organ",
-      "all the writings or works of a particular kind or on a particular subject"
-    ]
-  },
-  "rally": {
-    "tv": [
-      "to muster for a common purpose",
-      "to arouse for action"
-    ],
-    "itv": "to come together again to renew an effor",
-    "n": [
-      "a mustering of scattered forces to renew an effort",
-      "a mass meeting intended to arouse group enthusiasm"
-    ]
-  },
-  "traction": {
-    "n": [
-      "the process of treating a broken bone with special medical equipment that pulls it in traction",
-      "the force that prevents something such as a wheel sliding on a surface",
-      "if a new idea or thing gains traction, it becomes accepted by or popular with more and more people"
-    ]
-  },
-  "abuse": {
-    "n": [
-      "cruel or violent treatment of someone",
-      "the use of something in a way that it should not be used",
-      "rude or offensive things that someone says when they are angry"
-    ]
-  },
-  "malicious": {
-    "adj": "very unkind and cruel, and deliberately behaving in a way that is likely to upset or hurt someone"
-  },
-  "phishing": {
-    "n": "the criminal activity of sending emails or having a wesit that is intended to trick someone into giving away information such as their bank account number or their computer password. This information is then used to get money or goods"
-  },
-  "incentive": {
-    "n": "something that encourages you to work harder, start a new activity etc"
-  },
-  "aligned": {
-    "tv": [
-      "to publicly support a political group, country, or a person that you agree with",
-      "to arrange things so that they form a line or are parallel to each other, or to be in a osition that forms a line etc",
-      "to organize or change something so that it has the right relationship to something else"
-    ]
-  },
-  "fraud": {
-    "n": [
-      "the crime of deceiving people in order to gain something such as money or goods",
-      "someone or something that is not what they claim to be"
-    ]
-  },
-  "simulation": {
-    "n": "the activity of producing conditions which are similar to real one, especially in order to test something, or the conditions that are produced"
-  },
-  "thread": {
-    "n": [
-      "a long thin string of cotton, silk etc used to sew or weave cloth",
-      "an idea, feelling, or feature that connects the different parts of an explanation, story etc"
-    ]
-  },
-  "evaluation": {
-    "n": "a judgement about how good, useful, or successful something is"
-  }
+  "word": "evaluation",
+  "n": "a judgement about how good, useful, or successful something is"
+}
+```
+
+```json
+{
+  "word": "thread",
+  "n1": "a long thin string of cotton, silk etc used to sew or weave cloth",
+  "n2": "an idea, feelling, or feature that connects the different parts of an explanation, story etc"
+}
+```
+
+```json
+{
+  "word": "simulation",
+  "n": "the activity of producing conditions which are similar to real one, especially in order to test something, or the conditions that are produced"
+}
+```
+
+```json
+{
+  "word": "fraud",
+  "n1": "the crime of deceiving people in order to gain something such as money or goods",
+  "n2": "someone or something that is not what they claim to be"
+}
+```
+
+```json
+{
+  "word": "aligned",
+  "v1": "to publicly support a political group, country, or a person that you agree with",
+  "v2": "to arrange things so that they form a line or are parallel to each other, or to be in a osition that forms a line etc",
+  "v3": "to organize or change something so that it has the right relationship to something else"
+}
+```
+
+```json
+{
+  "word": "incentive",
+  "n": "something that encourages you to work harder, start a new activity etc"
+}
+```
+
+```json
+{
+  "word": "phishing",
+  "n": "the criminal activity of sending emails or having a wesit that is intended to trick someone into giving away information such as their bank account number or their computer password. This information is then used to get money or goods"
+}
+```
+
+```json
+{
+  "word": "malicious",
+  "adj": "very unkind and cruel, and deliberately behaving in a way that is likely to upset or hurt someone"
+}
+```
+
+```json
+{
+  "word": "traction",
+  "n1": "the process of treating a broken bone with special medical equipment that pulls it in traction",,
+  "n2": "the force that prevents something such as a wheel sliding on a surface",
+  "n3": "if a new idea or thing gains traction, it becomes accepted by or popular with more and more people"
+}
+```
+
+```json
+{
+  "word": "rally",
+  "v1": "to muster for a common purpose",
+  "v2": "to arouse for action",
+  "v3": "to come together again to renew an effor",
+  "n1": "a mustering of scattered forces to renew an effort",
+  "n2": "a mass meeting intended to arouse group enthusiasm"
+}
+```
+
+```json
+{
+  "word": "corpus",
+  "n1": "the body of a human or animal especially when dead",
+  "n2": "the main part or body of a bodily structure or organ",
+  "n3": "all the writings or works of a particular kind or on a particular subject"
+}
+```
+
+```json
+{
+  "word": "wrap",
+  "tv": "to cover especially by winding or folding",
+  "itv": "to wind, coil, or twine so as t encircle or cover something",
+  "n": "material for wrapping"
+}
+```
+
+```json
+{
+  "word": "abuse",
+  "n1": "cruel or violent treatment of someone",
+  "n2": "the use of something in a way that it should not be used",
+  "n3": "rude or offensive things that someone says when they are angry"
 }
 ```
 
@@ -353,22 +384,25 @@
 
 ```json
 {
-  "transitive": {
-    "adj": "a transitive verb must have an object"
-  },
-  "identical": {
-    "adj": "exactly the same, or very similar"
-  },
-  "muster": {
-    "tv": [
-      "to get enough courage, confidence, support etc to do something, especially with difficulty",
-      "if soldier muster, or if someone musters them, they come together in a group"
-    ],
-    "eg": [
-      "Finally I mustered up the courage to ask her out.",
-      "In April 1185, he began to muster an army."
-    ]
-  }
+  "word": "transitive",
+  "adj": "a transitive verb must have an object"
+}
+```
+
+```json
+{
+  "word": "identical",
+  "adj": "exactly the same, or very similar"
+}
+```
+
+```json
+{
+  "word": "muster",
+  "tv1": "to get enough courage, confidence, support etc to do something, especially with difficulty",
+  "tv2": "if soldier muster, or if someone musters them, they come together in a group",
+  "eg1": "Finally I mustered up the courage to ask her out.",
+  "eg2": "In April 1185, he began to muster an army."
 }
 ```
 
@@ -378,12 +412,15 @@
 
 ```json
 {
-  "svelte": {
-    "adj": "thin and graceful"
-  },
-  "singularity": {
-    "n": "technical an extremely small point in space that contains an extremely large amount of material and which does not obey th eusual laws of nature, for example a black hole"
-  }
+  "word": "svelte",
+  "adj": "thin and graceful"
+}
+```
+
+```json
+{
+  "word": "singularity",
+  "n": "technical an extremely small point in space that contains an extremely large amount of material and which does not obey th eusual laws of nature, for example a black hole"
 }
 ```
 
@@ -393,30 +430,41 @@
 
 ```json
 {
-  "quest": {
-    "n": "a long search for something that is difficult to find",
-    "eg": "the quest for human happiness"
-  }
-  "speculators": {},
-	"entry": {},
-	"distribute": {
-    "tv": [
-      "to share things amoung a group of people, especially in a planned way",
-      "to supply goods to shops and companies so that they can sell them",
-      "to spread something over a large area"
-    ]
-  },
- "render": {
-   "tv": [
-     "to cause someone or something to be in a particular condition",
-     "formal to give something to someone or do something, because it is your dury or because someone expects your to",
-     "to express or present something in a particular way"
-   ],
-   "eg": [
-     "He was rendered almost speechless by the news.",
-     "an obligation to render assistance to those in need"
-   ]
- }
+  "word": "quest",
+  "n": "a long search for something that is difficult to find",
+  "eg": "the quest for human happiness"
+}
+```
+
+```json
+{
+  "word": "speculators"
+}
+```
+
+```json
+{
+  "word": "entry"
+}
+```
+
+```json
+{
+  "word": "distribute",
+  "v1": "to share things amoung a group of people, especially in a planned way",
+  "v2": "to supply goods to shops and companies so that they can sell them",
+  "v3": "to spread something over a large area"
+}
+```
+
+```json
+{
+  "word": "render",
+  "v1": "to cause someone or something to be in a particular condition",
+  "v2": "formal to give something to someone or do something, because it is your dury or because someone expects your to",
+  "v3": "to express or present something in a particular way",
+  "eg1": "He was rendered almost speechless by the news.",
+  "eg2": "an obligation to render assistance to those in need"
 }
 ```
 
@@ -426,8 +474,13 @@
 
 ```json
 {
-  "slaw": {},
-  "snipped": {}
+  "word": "slaw"
+}
+```
+
+```json
+{
+  "word": "snipped"
 }
 ```
 
@@ -437,12 +490,15 @@
 
 ```json
 {
-  "eligibe": {
-    "adj": "someone who is eligible for something is able or allowed to do it"
-  },
-  "infrastructure": {
-    "n": "the basic systems and structures that a country or organization needs in order to work properly, for example roads, railways, banks"    
-  }
+  "word": "eligibe",
+  "adj": "someone who is eligible for something is able or allowed to do it"
+}
+```
+
+```json
+{
+  "word": "infrastructure",
+  "n": "the basic systems and structures that a country or organization needs in order to work properly, for example roads, railways, banks"
 }
 ```
 
@@ -452,12 +508,9 @@
 
 ```json
 {
-  "period": {
-    "n": [
-      "a particular length of time with a beginning and an end",
-      "a particular time in someone's life or in history"
-    ]
-  }
+  "word": "period",
+  "n1": "a particular length of time with a beginning and an end",
+  "n2": "a particular time in someone's life or in history"
 }
 ```
 
@@ -467,23 +520,26 @@
 
 ```json
 {
-  "shards": {
-    "n": "a shard piece of glass or metal"
-  },
-  "obtain": {
-    "tv": "to get something that you want, especially through you effort, skill, or work",
-    "itv": "if a situation, system, or rule obtains, it continues to exist",
-    "eg": [
-      "Future information can be obtained from head office",
-      "These conditions no longer obtain"
-    ]
-  },
- "tier": {
-   "n": [
-     "one of serveral levels or layers that rise up one above the other",
-     "oen of several levels in an organization or system"
-   ]
- }
+  "word": "shards",
+  "n": "a shard piece of glass or metal"
+}
+```
+
+```json
+{
+  "word": "obtain",
+  "tv": "to get something that you want, especially through you effort, skill, or work",
+  "itv": "if a situation, system, or rule obtains, it continues to exist",
+  "eg1": "Future information can be obtained from head office",
+  "eg2": "These conditions no longer obtain"
+}
+```
+
+```json
+{
+  "word": "tier",
+  "n1": "one of serveral levels or layers that rise up one above the other",
+  "n2": "oen of several levels in an organization or system"
 }
 ```
 
