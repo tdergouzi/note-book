@@ -493,17 +493,16 @@
 
 ```json
 {
-  "ample": {
-   	"adj": [
-      "more than enough",
-      "literary large in a way that is attractive or pleasant"
-    ]
-  },
-  "intellectual": {
-    "adj": [
-      "relating to the ability to understand things and think intelligently"
-    ]
-  }
+  "word": "ample",
+  "adj1": "more than enough",
+  "adj2": "literary large in a way that is attractive or pleasant"
+}
+```
+
+```json
+{
+  "word": "intellectual",
+  "adj": "relating to the ability to understand things and think intelligently"
 }
 ```
 
@@ -513,42 +512,73 @@
 
 ```json
 {
-  "consensus": {
-    "n": "an opinion that everyone in a group agrees with or accepts"
-  },
-  "narrow": {
-    "adj": [
-      "measuring only a small distance from one side to the other, especially in relation to the length",
-      "a narrow attitude or way of looking at a situation is to limited and does not consider enough possibilities"
-    ]
-  },
-  "synchronous": {
-    "adj": "if two or more things are synchronous, they happen at the same time or work at the same speed"
-  },
-  "resilient": {
-    "adj": "able to become strong, happy, or successful again after a difficult situation or event"
-  },
-  "stealth": {
-    "n": "when you do something very quietly, slowly, or secretly, so that no one notices you"
-  },
-  "compatible": {
-    "adj": "if two pieces of computer equipment of software are compatible, they can be used together, especially when they are made by different companies"
-  },
-  "perpetual": {
-    "adj": [
-      "continuing all the time without changing or stopping",
-      "repeated many times in a way that annoys you"
-    ]
-  },
-  "elapse": {
-    "v": "formal if a particular period of time elapses, it passes"
-  },
-  "immerse": {
-    "v": "to put someone or something deep into a liquid so that they are completely covered immerse somebody/something in something"
-  },
-  "granularity": {
-    "n": "the amount of detail that is included in something such as a system"
-  }
+  "word": "consensus",
+  "n": "an opinion that everyone in a group agrees with or accepts"
+}
+```
+
+```json
+{
+  "word": "narrow",
+  "adj1": "measuring only a small distance from one side to the other, especially in relation to the length",
+  "adj2": "a narrow attitude or way of looking at a situation is to limited and does not consider enough possibilities"
+}
+```
+
+```json
+{
+  "word": "synchronous",
+  "adj": "if two or more things are synchronous, they happen at the same time or work at the same speed"
+}
+```
+
+```json
+{
+  "word": "resilient",
+  "adj": "able to become strong, happy, or successful again after a difficult situation or event"
+}
+```
+
+```json
+{
+  "word": "stealth",
+  "n": "when you do something very quietly, slowly, or secretly, so that no one notices you"
+}
+```
+
+```json
+{
+  "word": "compatible",
+  "adj": "if two pieces of computer equipment of software are compatible, they can be used together, especially when they are made by different companies"
+}
+```
+
+```json
+{
+  "word": "perpetual",
+  "adj1": "continuing all the time without changing or stopping",
+  "adj2": "repeated many times in a way that annoys you"
+}
+```
+
+```json
+{
+  "word": "elapse",
+  "v": "formal if a particular period of time elapses, it passes"
+}
+```
+
+```json
+{
+  "word": "immerse",
+  "v": "to put someone or something deep into a liquid so that they are completely covered immerse somebody/something in something"
+}
+```
+
+```json
+{
+  "word": "granularity",
+  "n": "the amount of detail that is included in something such as a system"
 }
 ```
 
@@ -560,9 +590,8 @@
 
 ```json
 {
-  "phase": {
-    "n": "one of the stages of a process of development or change"
-  }
+  "word": "phase",
+  "n": "one of the stages of a process of development or change"
 }
 ```
 
@@ -572,12 +601,15 @@
 
 ```json
 {
-  "summarize": {
-    "v": "to make a short statement giving only the main information and not the details of a plan, event, report etc"
-  },
-  "summary": {
-    "n": "a shrot statement that gives the main information about something, without giving all the details"
-  }
+  "word": "summarize",
+  "v": "to make a short statement giving only the main information and not the details of a plan, event, report etc"
+}
+```
+
+```json
+{
+  "word": "summary",
+  "n": "a shrot statement that gives the main information about something, without giving all the details"
 }
 ```
 
@@ -587,16 +619,23 @@
 
 ```json
 {
-  "subsequent": {
-    "adj": "happing or coming after something else"
-  },
-  "circumstance": {
-		"n": "the conditions that affect a situation, action, event etc" 
-  },
-  "filing": {
-    "un": "the work of arranging documents in the correct files",
-    "n": "a document, report etc that is officially recorded"
-  }
+  "world": "subsequent",
+  "adj": "happing or coming after something else"
+}
+```
+
+```json
+{
+  "word": "circumstance",
+  "n": "the conditions that affect a situation, action, event etc" 
+}
+```
+
+```json
+{
+  "word": "filing",
+  "un": "the work of arranging documents in the correct files",
+  "n": "a document, report etc that is officially recorded"
 }
 ```
 
@@ -605,16 +644,16 @@
 14
 
 ```json
-# blob
 {
+  "word": "blob",
   "n1": "a very small round mass of a liquid or sticky substance",
   "n2": "something that cannot be clearly seen, especially because it is far away"
 }
 ```
 
 ```json
-# threshold
 {
+  "word": "threshold",
   "n1": "the entrance to a room or building, or the area of floor or ground at th entrance",
   "eg1": "She opened the door and stepped across the threshold",
   "n2": "the level at which something starts to happen or have an effect",
@@ -623,8 +662,8 @@
 ```
 
 ```json
-# enact
 {
+  "word": "enact",
   "v1": "formal to act in a play, story etc",
  	"v2": "law to make a proposal into a law"
 }
@@ -635,8 +674,8 @@
 17 
 
 ```json
-# arguably
 {
+  "word": "arguably",
   "p": "/ˈɑːɡjuəbli/",
   "adv": "used when giving your opinion to say that there are good reasons why something might be true",
   "eg": "Arguably one of the main reasons for the success of EIP-20 tokens lies in the interplay between `approve` and `transferFrom`"
@@ -644,8 +683,8 @@
 ```
 
 ```json
-# scarcely
 {
+  "word": "scarcely",
   "p": "/ˈskeəsli $ ˈsker-/",
   "adv1": "almost not or almost none at all",
   "eg1": "The city had scarcely changed in 20 years",
@@ -655,8 +694,8 @@
 ```
 
 ```json
-# ubiquitous
 {
+  "word": "ubiquitous",
   "p": "/juːˈbɪkwɪtəs/",
   "adj": "seeming to be everywhere"
   "eg": "While EIP-20 tokens have become ubiquitous in the Ethereum ecosystem"
@@ -664,8 +703,8 @@
 ```
 
 ```json
-# draft
 {
+  "word": "draft",
   "p": "/drɑːft $ dræft/",
   "n": "a piece of writing or a plan that is not yet in its finished form"
 }
@@ -676,8 +715,8 @@
 20
 
 ```json
-# occur
 {
+  "word": "occur",
 	"p": "/əˈkɜː $ əˈkɜːr/ ",
   "v1": "to happen",
   "v2": "to happen or exist in a particular place or situation"
@@ -685,24 +724,24 @@
 ```
 
 ```json
-# simultaneous
 {
+  "word": "simultaneous",
   "p": "/ˌsɪməlˈteɪniəs◂ $ ˌsaɪ-/"
 	"adj": "things that are simultaneous happen at exactly the same time"
 }
 ```
 
 ```json
-# ultimately
 {
+  "word": "ultimately",
   "p": "",
   "adv": "finaly, after everything else has been done or considered"
 }
 ```
 
 ```json
-# scale
 {
+  "word": "scale",
   "p": "/skeɪl/",
   "n1": "the size or level of something, or amount that something is happening",
   "n2": "a whole range of different types of people or things, from the lowert level to highest"
@@ -714,8 +753,8 @@
 21
 
 ```json
-# insight
 {
+  "word": "insight",
   "p": "/ˈɪnsaɪt/",
   "cn": "a sudden clear understanding of something or part of something, especially a complicated situation or idea",
   "ucn": "the ability to understand and realize what people or situations are really like"
@@ -723,8 +762,8 @@
 ```
 
 ```json
-# subscription
 {
+  "word": "subscription",
   "n": "an amount of money you pay, usually once a year,"
 }
 ```
@@ -734,8 +773,8 @@
 23
 
 ```json
-# prompt
 {
+  "word": "prompt",
   "p": "/prɒmpt/",
   "v1": "to make someone decide to do something",
   "v2": "to make people say or do something as a reaction",
@@ -748,22 +787,20 @@
 28
 
 ```json
-# thrill
 {
+  "word": "thrill",
   "p": "/θrɪl/",
   "n": "a sudden strong feeling of excitement and pleasure"
 }
 ```
 
 ```json
-# negligible
 {
+  "word": "negligible",
   "p": "/ˈneɡlɪdʒəbəl/",
   "adj": "too slight or unimportant to have any effect"
 }
 ```
-
-
 
 
 
@@ -772,15 +809,15 @@
 03
 
 ```json
-# crash course
 {
+  "word": "crash course",
   "n": "a course which you can learn a lot about particular subject in a very short period of time"
 }
 ```
 
 ```json
-# vulnerable
 {
+  "word": "vulnerable",
   "p": "/ˈvʌlnərəbəl/",
   "adj1": "someone who is vulnerable can be easily harmed or hurt",
   "adj2": "a place, a thing or ideal that is vulnerable is easy attack or criticize"
@@ -788,8 +825,8 @@
 ```
 
  ```json
- # demonstrate
  {
+   "word": "demonstrate",
    "p": "/ˈdemənstreɪt/",
    "v1": "to show or prove something clearly",
    "v2": "to show or describe how to do something or how something works"
@@ -797,16 +834,16 @@
  ```
 
 ```json
-# essentially
 {
+  "word": "essentially",
   "p": "/ɪˈsenʃəli/",
   "adv": "used when stating basic facts about something"
 }
 ```
 
 ```json
-# guardians
 {
+  "word": "guardians",
   "p": "/ˈɡɑːdiən/",
   "n1": "formal someone who guards or protects something"
 }
@@ -814,11 +851,11 @@
 
 
 
-0406
+06
 
 ```json
-# suscipious
 {
+  "word": "suscipious",
   "p": "/səˈspɪʃəs/",
   "adj1": "thinking that someone might be guilty of doing something wrong or dishonest",
   "adj2": "making you think that something bad or illegal is happening"
@@ -827,11 +864,11 @@
 
 
 
-0407
+07
 
 ```json
-# rigorous
 {
+  "word": "rigorous",
   "p": "/ˈrɪɡərəs/",
   "adj1": "careful, thorough, and exact",
   "adj2": "very severe or strict"
@@ -839,8 +876,8 @@
 ```
 
 ```json
-# conveniently
 {
+  "word": "conveniently",
   "p": "/kənˈviːniəntli/",
   "adv1": "in a way that is useful to you because it saves your time or does not spoil your plans or cause you problems",
   "adv2": "in a place that is close or easily reached"
@@ -848,16 +885,16 @@
 ```
 
 ```json
-# assignment
 {
+  "word": "assignment",
   "p": "/əˈsaɪnmənt/",
   "n": "a piece of work that is given to someone as part of their job"
 }
 ```
 
 ```json
-# symbolic
 {
+  "word": "symbolic",
   "p": "/sɪmˈbɒlɪk $ -ˈbɑː-/",
   "adj1": "a symbolic action is important because of what it represents but may not have any real effect",
   "adj2": "representing a particular idea or quality"
@@ -865,8 +902,8 @@
 ```
 
 ```json
-# demonstrating
 {
+  "word": "demonstrating",
   "p": "/ˈdemənstreɪt/",
   "v1": "to show or prove something clearly",
   "v2": "to show or describe how to do something or how something works"
@@ -875,50 +912,50 @@
 
 
 
-0410
+10
 
 ```json
-# ratify
 {
+  "word": "ratify",
   "p": "/ˈrætɪfaɪ/",
   "v": "to make a written agreement official by signing it"
 }
 ```
 
 ```json
-# precision
 {
+  "word": "precision",
   "p": "/prɪˈsɪʒən/",
   "n": "the quality of being very exact or correct"
 }
 ```
 
 ```json
-# facilitate
 {
+  "word": "facilitate",
   "p": "/fəˈsɪlɪteɪt/",
   "v": "to make it easier for a process or activity to happen"
 }
 ```
 
 ```json
-# indeterminate
 {
+  "word": "indeterminate",
   "p": "/ˌɪndɪˈtɜːmənət",
  	"adj": "impossible to know about definitely or exactly"
 }
 ```
 
 ```json
-# metric
 {
+  "word": "metric",
   "adj": "using or connected with metric system of weights or measures"
 }
 ```
 
 ```json
-# faucet
 {
+  "word": "faucet",
   "p": "/ˈfɔːsɪt/",
   "n": "the thing that you turn on and off to control the flow of water from a pipe"
 }
@@ -929,25 +966,25 @@
 12
 
 ```json
-# allocation
 {
+  "word": "allocation",
   "p": "/ˌæləˈkeɪʃən/",
   "n": "the amount or share of something that has been allocated for a particular purpose"
 }
 ```
 
 ```json
-# profile
 {
-  "p": "/ˈprəʊfaɪl $ ˈproʊ-/",
+  "word": "profile",
+  "p": "/ˈprəʊfaɪl",
   "n1": "a slide view of someone's head",
   "n2": "a short description that gives important details about a person, a group of people, or a place"
 }
 ```
 
 ```json
-# hint
 {
+  "word": "hint",
   "p": "hint",
   "n1": "something that you say or do to suggest something to someone, without telling them directly",
   "n2": "a useful piece of advice about how to do something"
@@ -955,4 +992,13 @@
 ```
 
 
+
+Template
+
+```json
+{
+  "word": "",
+  "p": ""
+}
+```
 
