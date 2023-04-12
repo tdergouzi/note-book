@@ -736,7 +736,7 @@
 ```json
 # prompt
 {
-  "p": "/prɒmpt $ prɑːmpt/",
+  "p": "/prɒmpt/",
   "v1": "to make someone decide to do something",
   "v2": "to make people say or do something as a reaction",
   "v3": "to help a speaker who pauses, by suggesting how to continue"
@@ -921,6 +921,36 @@
 {
   "p": "/ˈfɔːsɪt/",
   "n": "the thing that you turn on and off to control the flow of water from a pipe"
+}
+```
+
+
+
+12
+
+```json
+# allocation
+{
+  "p": "/ˌæləˈkeɪʃən/",
+  "n": "the amount or share of something that has been allocated for a particular purpose"
+}
+```
+
+```json
+# profile
+{
+  "p": "/ˈprəʊfaɪl $ ˈproʊ-/",
+  "n1": "a slide view of someone's head",
+  "n2": "a short description that gives important details about a person, a group of people, or a place"
+}
+```
+
+```json
+# hint
+{
+  "p": "hint",
+  "n1": "something that you say or do to suggest something to someone, without telling them directly",
+  "n2": "a useful piece of advice about how to do something"
 }
 ```
 
