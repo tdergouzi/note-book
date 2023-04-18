@@ -89,36 +89,3 @@ contract Example is Initializable {
 #### Analyse
 
 <img src="./assets/image-20230410181723046.png" alt="image-20230410181723046" style="zoom:50%;" />
-
-
-
-##### 100% Statements 2/2 
-
-TODO
-
-
-
-##### 100% Branches 8/8
-
-`initialize()` 
-
-- It is first time to call.
-- it is not the first to call.
-
-`setOwner()`
-
-- Caller is not owner.
-- Caller is owner and Param `_owner` is same with old.
-- Caller is  owner and param _owner is different from old.
-
-
-
-##### 100% Functions 3/3
-
-TODO
-
-
-
-##### 100% Lines 5/5
-
-TODO

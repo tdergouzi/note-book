@@ -1049,6 +1049,75 @@
 
 
 
+17
+
+```json
+{
+  "word": "proto",
+  "prefix": "existing or coming before other things of the same type"
+}
+```
+
+```json
+{
+  "word": "sequence",
+  "p": "/ˈsiːkwəns/",
+  "n1": "the order that something happens or exists in, or the order it is supposed to happen or exist in",
+  "n2": "a series of related events, actions etc that happen of are done in a particular order"
+}
+```
+
+```json
+{
+  "word": "sanction",
+  "p": "/ˈsæŋkʃən/",
+  "n1": "official permission, approval, or acceptance",
+  "n2": "a form of punishment that can be used if someone disobeys a rule or law"
+}
+```
+
+```json
+{
+  "word": "composit",
+  "p": "/ˈkɒmpəzət/",
+  "adj": "made up of different parts or materials"
+}
+```
+
+```json
+{
+  "word": "stumble",
+  "p": "/ˈstʌmbəl/",
+  "v1": "to hit your foot against something or put your foot down awkwardly while you are walking or running, so that you almost fail",
+  "v2": "to walk in an unsteady way and often almost fail",
+  "v3": "to stop or make a mistake when you are reading to people or speaking"
+}
+```
+
+```json
+{
+  "word": "elaborate",
+  "p": "/ɪˈlæbərət/",
+  "adj1": "having a lot of small parts or details put together in a complicated way",
+  "adj2": "carefully planned and organized in great detail"
+}
+```
+
+
+
+18
+
+```json
+{
+  "word": "deliberately",
+  "p": "/dɪˈlɪbərətli/",
+  "adv1": "done in a way that is intended or planned",
+  "adv2": "done or said in a slow careful way"
+}
+```
+
+
+
 Template
 
 ```json
