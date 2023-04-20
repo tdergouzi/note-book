@@ -1118,6 +1118,53 @@
 
 
 
+20
+
+```json
+{
+  "word": "novel",
+  "p": "/ˈnɒvəl $ ˈnɑː-/",
+  "n": "a long written story in which the characters and events are usually imaginary"
+}
+```
+
+```json
+{
+  "word": "vertical",
+  "p": "/ˈvɜːtɪkəl $ ˈvɜːr-/",
+  "adj1": "pointing up in a line that forms an angle of 90 with a flat surface",
+  "adj2": "having a structure in which are top, middle, and bottem levels"
+}
+```
+
+```json
+{
+  "word": "horizontal",
+  "p": "/ˌhɒrəˈzɒntl◂ $ ˌhɑːrəˈzɑːntl◂/",
+  "adj": "flat and level"
+}
+```
+
+```json
+{
+  "word": "legacy",
+  "p": "/ˈleɡəsi/",
+  "n1": "something that happens or exists as a result of things that happened at an earlier time",
+  "n2": "money or property that you receive from someone after they die"
+}
+```
+
+```json
+{
+  "word": "bin",
+  "p": "/bɪn/",
+  "n1": "a container for putting waste in",
+  "n2": "a large container for storing things, such as goods in shop or substances in a factory"
+}
+```
+
+
+
 Template
 
 ```json
