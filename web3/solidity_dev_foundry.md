@@ -176,3 +176,31 @@ forge test --match-path testXXX.t.sol -v
 -vvvvv # Print execution and setup traces for all tests
 ```
 
+
+
+### Templates
+
+#### traderjoe-xyz/joe-v2
+
+[joe-v2](https://github.com/traderjoe-xyz/joe-v2)
+
+##### The testing architecture
+
+All the test preparation work, including variable definition and contract cratetion , is placed in the `helpers/TestHelper.sol` file.
+
+`TestHelper.sol` is abstract contract, here is the code flow:
+
+- Define constants variables `internal constant`
+- Define operators `payable immutable`
+- Define contract variables `contract internal`
+- `setUp`
+  - Craete contracts
+  - Label contracts
+  - Get forked contracts
+  - Call pre-functions
+- Define the tool function
+
+
+
+
+
