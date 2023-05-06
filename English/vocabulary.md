@@ -1165,6 +1165,32 @@
 
 
 
+24
+
+```json
+{
+  "word": "diversity",
+  "p": "/daɪˈvɜːsəti, də- $ -ɜːr-/",
+  "n1": "the fact of including many different types of people or things",
+  "n2": "a range of different people, things, or ideas"
+}
+```
+
+
+
+28
+
+```json
+{
+  "word": "pose",
+  "v1": "to exit in a way that may cause a problem, danger, difficulty",
+  "v2": "to sit or stand in a particular position in order to be photographed or painted",
+  "v3": "to dress or behave like a rich and fashionable persion in order to make other people notice you or admire you"
+}
+```
+
+
+
 Template
 
 ```json
