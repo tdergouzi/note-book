@@ -52,3 +52,13 @@ Technology notes.
 ### SPDX
 
 SPDX is an open standard for communicating software bill of material information, including provenance, license, security, and other related information. 
+
+
+
+### RLP & SSZ
+
+RLP（Recursive Length Prefix） 和 SSZ（Simple Serialize）都是 Ethereum 中常用的序列化格式。
+
+RLP 是一种将任意数据结构编码为字节数组的序列化格式，采用了递归长度前缀编码。在以太坊协议中，RLP 被广泛用于编码交易、区块头、状态数据、智能合约数据等各种数据对象。
+
+SSZ 是一种基于 RL 编码的二进制格式序列化方案，它通过限制数据结构的类型和字段顺序来降低序列化和反序列化的复杂性。

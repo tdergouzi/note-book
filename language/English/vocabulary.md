@@ -1191,6 +1191,102 @@
 
 
 
+### 2023-05
+
+```json
+{
+  "word": "collateral",
+  "p": "/kəˈlætərəl/",
+  "n": "property or other goods that you promise to give someone if you cannot pay back the money they lend you"
+}
+```
+
+
+
+17
+
+```json
+{
+  "word": "transient",
+  "p": "/ˈtrænziənt $ ˈtrænʃənt/",
+  "n1": "continuing only for a shor time",
+  "n2": "working or staying somewhere for only a short time"
+}
+```
+
+
+
+```json
+{
+  "word": "congestion",
+  "p": "/kənˈdʒestʃən/",
+  "n": "the problem of too much traffic in a place"
+}
+```
+
+
+
+```json
+{
+  "word": "revenue",
+  "p": "/ˈrevənjuː $ -nuː/",
+  "n": "money that a busyneess or organization receives over a period of time"
+}
+```
+
+
+
+```json
+{
+  "word": "envision",
+  "p": "",
+  "v": "to imagine something that you think might happen in the future, especially something you think will be good"
+}
+```
+
+
+
+```json
+{
+  "word": "virtuous",
+  "p": "/ˈvɜːtʃuəs $ ˈvɜːr-/",
+  "adj": "behaving in a very honest and moral way"
+}
+```
+
+
+
+```json
+{
+  "word": "concise",
+  "p": "/kənˈsaɪs/",
+  "adj": "short, with no unnecessary words"
+}
+```
+
+
+
+```json
+{
+  "word": "demonstrate",
+  "p": "/ˈdemənstreɪt/",
+  "v1": "to prove or show somethin clearly",
+  "v2": "to show or describe how to do something or how something works"
+}
+```
+
+
+
+```json
+{
+  "word": "guzzle",
+  "p": "/ˈɡʌzəl/",
+  "v": "to eat or drink a lot of something, eagerly and quickly"
+}
+```
+
+
+
 Template
 
 ```json
