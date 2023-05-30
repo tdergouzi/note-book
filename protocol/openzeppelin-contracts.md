@@ -318,10 +318,10 @@
         bytes32 adminRole; // 角色管理员角色，只有拥有该角色的账户地址拥有权限添加该角色的账户地址（有点绕口）
     }
 
-		// 角色-角色数据映射表
+    // 角色-角色数据映射表
     mapping(bytes32 => RoleData) private _roles;
 
-		// 默认管理员角色 key
+    // 默认管理员角色 key
     bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;
 
     modifier onlyRole(bytes32 role) {
