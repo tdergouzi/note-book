@@ -312,8 +312,8 @@
 数据结构
 
 ```solidity
-		// 角色数据
-		struct RoleData {
+    // 角色数据
+    struct RoleData {
         mapping(address => bool) members; // 角色地址-布尔映射表
         bytes32 adminRole; // 角色管理员角色，只有拥有该角色的账户地址拥有权限添加该角色的账户地址（有点绕口）
     }
