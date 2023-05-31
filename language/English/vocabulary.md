@@ -1287,6 +1287,30 @@
 
 
 
+31
+
+```json
+{
+  "word": "affiliation",
+  "p": "/əˈfɪlieɪt/",
+  "v": "if a group or organization affiliate to or with another larger one, it forms a close connection with it",
+  "n": "a company, organization etc that is connected with or controlled by a larger one"
+}
+```
+
+
+
+```json
+{
+  "word": "retrieve",
+  "p": "/rɪˈtriːv/",
+  "v1": "to find something and bring it back",
+  "v2": "to get back information that has been stored in the memory of a computer"
+}
+```
+
+
+
 Template
 
 ```json

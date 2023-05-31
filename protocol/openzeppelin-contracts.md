@@ -361,7 +361,7 @@ function renounceRole(bytes32 role, address account) public;
 
 继承 `AccessControl.sol` 、`CrossChainEnabled`.sol 合约，扩展跨链权限管理。
 
-方法：
+方法
 
 ```solidity
 // 校验调用者角色权限
@@ -381,7 +381,7 @@ function _crossChainRoleAlias(bytes32 role) internal pure returns (bytes32);
 
 `AccessControl.sol` 扩展合约，继承 `AccessControl.sol` 功能，扩展增加管理员。
 
-数据结构：
+数据结构
 
 ```solidity
     address private _pendingDefaultAdmin; // 待定管理员地址
@@ -394,7 +394,7 @@ function _crossChainRoleAlias(bytes32 role) internal pure returns (bytes32);
     uint48 private _pendingDelaySchedule; // 待定周期时长有效时间点，有效期内不可修改
 ```
 
-方法：
+方法
 
 ```solidity
 // IERC165-supportsInterface 用于校验合约是否实现继承的 interfaces
@@ -419,8 +419,8 @@ function defaultAdmin() public view virtual returns (address);
 // 获取待定管理员地址和被确认时间点
 function pendingDefaultAdmin() public view virtual returns (address newAdmin, uint48 schedule);
 
-// 获取确认周期时长
-// 优先判断是否存在待定周期时长，如果存在则返回待定周期时长，否则返回默认周期时长
+// 获取默认周期时长
+// 优先判断是否存在待定周期时长，如果存在且过了确认时间点则返回待定周期时长，否则返回当前周期时长
 function defaultAdminDelay() public view virtual returns (uint48);
 
 // 获取待定周期时长和有效时间点
@@ -442,12 +442,101 @@ function cancelDefaultAdminTransfer();
 // 要求调用者为新管理员角色
 function acceptDefaultAdminTransfer();
 
-// 更新待定周期时长
+// 更新周期时长
+// 如果存在待定周期时长，将当前周期时长更新为待定周期时长，再将待定周期时长更新为新的数据
+// 如果不存在待定周期时长，则只更新待定周期时长，当前周期时长不变
 // 要求调用者为当前管理员角色
-function changeDefaultAdminDelay();
+function changeDefaultAdminDelay(uint48 newDelay);
 
-// 重制待定周期时长
+// 重制周期时长
 // 要求调用者为当前管理员角色
 function rollbackDefaultAdminDelay();
+```
+
+合约初始化了一个默认的管理员账户地址和管理员角色权限转移的确认周期，最重要的还是这个确认周期，避免了高权限角色转移的容错率，提供了一个缓冲期。同样的逻辑用于管理确认周期就有点繁重，确认周期的更新也会有一个确认周期和确认的时间点，感觉属实有点套娃的意思。不过一切为了安全。
+
+
+
+### access/AccessControlEnumerable.sol
+
+继承 `AccessControl.sol` ，扩展角色数量管理的功能。
+
+数据结构
+
+```solidity
+    using EnumerableSet for EnumerableSet.AddressSet;
+
+    mapping(bytes32 => EnumerableSet.AddressSet) private _roleMembers;
+```
+
+方法
+
+```solidity
+// IERC165-supportsInterface 用于校验合约是否实现继承的 interfaces
+function supportsInterface(bytes4 interfaceId) public view returns (bool);
+
+// 通过角色地址数组游标获取账户地址
+function getRoleMember(bytes32 role, uint256 index) public view returns (address);
+
+// 获取角色账户地址数量
+function getRoleMemberCount(bytes32 role) public view returns (uint256);
+```
+
+
+
+access/Ownable.sol
+
+最常用的所有者权限合约，合约初始化默认将合约部署调用者地址设置为所有者权限。
+
+数据结构
+
+```solidity
+    address private _owner;
+```
+
+方法
+
+```solidity
+// 获取所有者账户地址
+function owner() public view virtual returns (address);
+
+// 放弃所有者权限，默认权限转移给0地址
+// 要求所有者账户调用
+function renounceOwnership() public virtual onlyOwner;
+
+// 转移所有者权限
+// 要求所有者账户调用
+function transferOwnership(address newOwner) public virtual onlyOwner;
+```
+
+
+
+### access/Ownable2Step.sol
+
+继承 `Ownable.sol` ，扩展功能将原权限转移功能拆分为两步进行，第一步指定待定所有者账户地址，第二步待定账户地址接受权限。
+
+为什么要提供这个功能合约，相较于 `AccessControlDefaultAdminRules.sol` 个人更倾向于属于业务逻辑功能的扩展。
+
+数据结构
+
+```solidity
+    address private _pendingOwner;
+```
+
+
+
+方法（除非有 `override` 否则不列出继承合约方法）
+
+```solidity
+// 获取待定账户地址
+function pendingOwner() public view virtual returns (address)
+
+// 权限转移，设置待定账户地址
+// 要求所有者账户调用
+function transferOwnership(address newOwner) public virtual override onlyOwner;
+
+// 权限转移，待定账户接受所有者权限
+// 要求待定账户地址调用
+function acceptOwnership() public virtual;
 ```
 
