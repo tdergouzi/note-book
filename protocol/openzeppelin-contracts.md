@@ -12,7 +12,7 @@
 │   ├── AccessControl.sol ✅
 │   ├── AccessControlCrossChain.sol ✅
 │   ├── AccessControlDefaultAdminRules.sol ✅
-│   ├── AccessControlEnumerable.sol
+│   ├── AccessControlEnumerable.sol ✅
 │   ├── IAccessControl.sol
 │   ├── IAccessControlDefaultAdminRules.sol
 │   ├── IAccessControlEnumerable.sol
@@ -20,7 +20,7 @@
 │   ├── Ownable2Step.sol
 │   └── README.adoc
 ├── crosschain
-│   ├── CrossChainEnabled.sol
+│   ├── CrossChainEnabled.sol ✅
 │   ├── README.adoc
 │   ├── amb
 │   │   ├── CrossChainEnabledAMB.sol
@@ -305,7 +305,9 @@
 
 ## 合约解析
 
-### access/AccessControl.sol
+### access
+
+#### AccessControl.sol
 
 角色权限控制合约。
 
@@ -357,7 +359,7 @@ function renounceRole(bytes32 role, address account) public;
 
 
 
-### access/AccessControlCrossChain.sol
+#### AccessControlCrossChain.sol
 
 继承 `AccessControl.sol` 、`CrossChainEnabled`.sol 合约，扩展跨链权限管理。
 
@@ -377,7 +379,7 @@ function _crossChainRoleAlias(bytes32 role) internal pure returns (bytes32);
 
 
 
-### access/AccessControlDefaultAdminRules
+#### AccessControlDefaultAdminRules.sol
 
 `AccessControl.sol` 扩展合约，继承 `AccessControl.sol` 功能，扩展增加管理员。
 
@@ -457,7 +459,7 @@ function rollbackDefaultAdminDelay();
 
 
 
-### access/AccessControlEnumerable.sol
+#### AccessControlEnumerable.sol
 
 继承 `AccessControl.sol` ，扩展角色数量管理的功能。
 
@@ -484,7 +486,7 @@ function getRoleMemberCount(bytes32 role) public view returns (uint256);
 
 
 
-access/Ownable.sol
+#### Ownable.sol
 
 最常用的所有者权限合约，合约初始化默认将合约部署调用者地址设置为所有者权限。
 
@@ -511,7 +513,7 @@ function transferOwnership(address newOwner) public virtual onlyOwner;
 
 
 
-### access/Ownable2Step.sol
+#### Ownable2Step.sol
 
 继承 `Ownable.sol` ，扩展功能将原权限转移功能拆分为两步进行，第一步指定待定所有者账户地址，第二步待定账户地址接受权限。
 
@@ -522,8 +524,6 @@ function transferOwnership(address newOwner) public virtual onlyOwner;
 ```solidity
     address private _pendingOwner;
 ```
-
-
 
 方法（除非有 `override` 否则不列出继承合约方法）
 
@@ -540,3 +540,32 @@ function transferOwnership(address newOwner) public virtual override onlyOwner;
 function acceptOwnership() public virtual;
 ```
 
+
+
+### crosschain
+
+#### CrossChainEnabled.sol
+
+跨链调用控制合约。
+
+方法
+
+```solidity
+// 修饰器 要求必须是跨链调用
+modifier onlyCrossChain() {};
+
+// 修饰器 要求目标地址必须是跨链调用者地址，非本链交易发起者账户地址
+modifier onlyCrossChainSender(address expected) {};
+
+// 内部方法 抽象接口 要求继承合约实现该接口
+// 获取当前交易是否为跨链合约交易
+function _isCrossChain() internal view virtual returns (bool);
+
+// 内部方法 抽象接口 要求继承合约实现该接口
+// 获取跨链交易调用者账户地址
+function _crossChainSender() internal view virtual returns (address);
+```
+
+
+
+#### arbitrum/CrossChainEnabledArbitrumL1.sol
