@@ -1311,6 +1311,52 @@
 
 
 
+### 2023-06
+
+20
+
+```json
+{
+  "word": "dilemma",
+  "p": "/dəˈlemə, daɪ-/",
+  "n": "a situation in which it is very difficult to decide what to do, because all the choices seem equally good or equally bad"
+}
+```
+
+
+
+```json
+{
+  "word": "acquire",
+  "p": "/əˈkwaɪə $ əˈkwaɪr/",
+  "v": "to obtain something by buying it or being given it"
+}
+```
+
+
+
+### 2023-07
+
+19
+
+```json
+{
+  "word": "moderation",
+  "p": "/ˌmɒdəˈreɪʃən $ ˌmɑː-/",
+  "n": "control of your behaviour, so that you keep your actions, feeling, habits etc within reasonable limits"
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 Template
 
 ```json
@@ -1319,4 +1365,3 @@ Template
   "p": ""
 }
 ```
-
