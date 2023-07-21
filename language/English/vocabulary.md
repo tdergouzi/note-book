@@ -1323,8 +1323,6 @@
 }
 ```
 
-
-
 ```json
 {
   "word": "acquire",
@@ -1358,21 +1356,70 @@
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-Template
-
 ```json
 {
-  "word": "",
+  "word": "comprehensive",
   "p": ""
 }
 ```
+
+```json
+{
+  "word": "strive"
+}
+```
+
+```json
+{
+  "word": "unbiased"
+}
+```
+
+```json
+{
+  "word": "collaborative"
+}
+```
+
+```json
+{
+  "word": "accuracy"
+}
+```
+
+```json
+{
+  "word": "boost"
+}
+```
+
+```json
+{
+  "word": "reaped"
+}
+```
+
+```json
+{
+  "word": "diminished"
+}
+```
+
+```json
+{
+  "word": "anecdotal"
+}
+```
+
+```json
+{
+  "word": "synonymous"
+}
+```
+
+```json
+{
+  "word": "zoomorphisms"
+}
+```
+
