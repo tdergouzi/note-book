@@ -1,8 +1,12 @@
-## Optimize Your Prompt
+# ChatGPT Prompt Engineering For Developers
 
 
 
-### Principles of Prompting
+Note of the [ChatGPT Prompt Engineering for Developers](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction) course, which is offered by DeepLearning.AI.
+
+
+
+## Principles of Prompting
 
 - Principle 1: Write clear and specific instructions, clear != short
 - Principle 2: Give the model time to think
@@ -11,7 +15,7 @@
 
 ### Principle 1
 
-#### Tractic 1: Use delimiters 
+**Tractic 1: Use delimiters** 
 
 ```
 Triple quotes: """
@@ -27,7 +31,7 @@ XML tags: <tag> </tag>
 
 
 
-#### Tractic 2: Ask for structured output
+**Tractic 2: Ask for structured output**
 
 HTML, JSON
 
@@ -42,7 +46,7 @@ book_id, title, author, genre.
 
 
 
-#### Tractic 3: Check whether conditions are satisfied 
+**Tractic 3: Check whether conditions are satisfied** 
 
 Check assumptions required to do the task.
 
@@ -68,7 +72,7 @@ then simply write \"No steps provided.\"
 
 
 
-#### Tractic 4:   Few-shot prompting
+**Tractic 4:   Few-shot prompting**
 
 Give successful examples of completing task. Then ask model to perform the task.
 
@@ -88,7 +92,7 @@ Your task is to answer in a consistent style.
 
 ### Principle 2
 
-#### Tractic 1:  Specify the steps to complete a task
+**Tractic 1:  Specify the steps to complete a task**
 
 Step 1: ...
 
@@ -121,7 +125,7 @@ Text: <text>
 
 
 
-#### Tractic 2: Instruct the model to work out its own solution before rushing to a conclusion
+**Tractic 2: Instruct the model to work out its own solution before rushing to a conclusion**
 
 ````python
 prompt = f"""
@@ -158,3 +162,7 @@ Makes statements that sound plausible but are not true.
 Reducing hallucination:
 
 Fist find the relevant information, then answer the question based on the relevant information.
+
+
+
+#### Prompt Inject
